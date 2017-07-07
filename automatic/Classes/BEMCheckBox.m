@@ -66,10 +66,10 @@
     // Default values
     _on = NO;
     _hideBox = NO;
-    _onTintColor = [UIColor colorWithRed:0 green:122.0/255.0 blue:255/255 alpha:1];
+    _onTintColor = [UIColor whiteColor];
     _onFillColor = [UIColor clearColor];
     _offFillColor = [UIColor clearColor];
-    _onCheckColor = [UIColor colorWithRed:0 green:122.0/255.0 blue:255/255 alpha:1];
+    _onCheckColor = [UIColor whiteColor];
     _tintColor = [UIColor lightGrayColor];
     _lineWidth = 2.0;
     _cornerRadius = 3.0;

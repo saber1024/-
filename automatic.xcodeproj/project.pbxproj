@@ -33,6 +33,13 @@
 		B823541A1F06514B00A9EC00 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = B82354191F06514B00A9EC00 /* back.png */; };
 		B823541B1F06514B00A9EC00 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = B82354191F06514B00A9EC00 /* back.png */; };
 		B823541C1F06514B00A9EC00 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = B82354191F06514B00A9EC00 /* back.png */; };
+		B84C0AC81F0F2410009C0D92 /* 椭圆 1.png in Resources */ = {isa = PBXBuildFile; fileRef = B84C0AC61F0F2410009C0D92 /* 椭圆 1.png */; };
+		B84C0AC91F0F2410009C0D92 /* 椭圆.png in Resources */ = {isa = PBXBuildFile; fileRef = B84C0AC71F0F2410009C0D92 /* 椭圆.png */; };
+		B84C0AD31F0F2677009C0D92 /* BEMAnimationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B84C0ACC1F0F2677009C0D92 /* BEMAnimationManager.m */; };
+		B84C0AD41F0F2677009C0D92 /* BEMCheckBox.m in Sources */ = {isa = PBXBuildFile; fileRef = B84C0ACE1F0F2677009C0D92 /* BEMCheckBox.m */; };
+		B84C0AD51F0F2677009C0D92 /* BEMCheckBoxGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = B84C0AD01F0F2677009C0D92 /* BEMCheckBoxGroup.m */; };
+		B84C0AD61F0F2677009C0D92 /* BEMPathManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B84C0AD21F0F2677009C0D92 /* BEMPathManager.m */; };
+		B86D27651F0F6591009333F3 /* ModelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B86D27641F0F6591009333F3 /* ModelViewController.m */; };
 		B885A0BA1F022F3B008869B4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B885A0B91F022F3B008869B4 /* main.m */; };
 		B885A0BD1F022F3B008869B4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B885A0BC1F022F3B008869B4 /* AppDelegate.m */; };
 		B885A0C01F022F3B008869B4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B885A0BF1F022F3B008869B4 /* ViewController.m */; };
@@ -126,6 +133,18 @@
 		B82354151F0650F100A9EC00 /* libChameleonFramework.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libChameleonFramework.a; path = "../../Library/Developer/Xcode/DerivedData/automatic-edxgrmszhfjvjcanxrgmewisngzu/Build/Products/Debug-iphoneos/ChameleonFramework/libChameleonFramework.a"; sourceTree = "<group>"; };
 		B82354171F0650F500A9EC00 /* libFSCalendar.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libFSCalendar.a; path = "../../Library/Developer/Xcode/DerivedData/automatic-edxgrmszhfjvjcanxrgmewisngzu/Build/Products/Debug-iphoneos/FSCalendar/libFSCalendar.a"; sourceTree = "<group>"; };
 		B82354191F06514B00A9EC00 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
+		B84C0AC61F0F2410009C0D92 /* 椭圆 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "椭圆 1.png"; sourceTree = "<group>"; };
+		B84C0AC71F0F2410009C0D92 /* 椭圆.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "椭圆.png"; sourceTree = "<group>"; };
+		B84C0ACB1F0F2677009C0D92 /* BEMAnimationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEMAnimationManager.h; sourceTree = "<group>"; };
+		B84C0ACC1F0F2677009C0D92 /* BEMAnimationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BEMAnimationManager.m; sourceTree = "<group>"; };
+		B84C0ACD1F0F2677009C0D92 /* BEMCheckBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEMCheckBox.h; sourceTree = "<group>"; };
+		B84C0ACE1F0F2677009C0D92 /* BEMCheckBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BEMCheckBox.m; sourceTree = "<group>"; };
+		B84C0ACF1F0F2677009C0D92 /* BEMCheckBoxGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEMCheckBoxGroup.h; sourceTree = "<group>"; };
+		B84C0AD01F0F2677009C0D92 /* BEMCheckBoxGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BEMCheckBoxGroup.m; sourceTree = "<group>"; };
+		B84C0AD11F0F2677009C0D92 /* BEMPathManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEMPathManager.h; sourceTree = "<group>"; };
+		B84C0AD21F0F2677009C0D92 /* BEMPathManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BEMPathManager.m; sourceTree = "<group>"; };
+		B86D27631F0F6591009333F3 /* ModelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelViewController.h; sourceTree = "<group>"; };
+		B86D27641F0F6591009333F3 /* ModelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelViewController.m; sourceTree = "<group>"; };
 		B885A0B51F022F3B008869B4 /* automatic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = automatic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B885A0B91F022F3B008869B4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B885A0BB1F022F3B008869B4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -232,6 +251,21 @@
 			name = utility;
 			sourceTree = "<group>";
 		};
+		B84C0ACA1F0F2677009C0D92 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				B84C0ACB1F0F2677009C0D92 /* BEMAnimationManager.h */,
+				B84C0ACC1F0F2677009C0D92 /* BEMAnimationManager.m */,
+				B84C0ACD1F0F2677009C0D92 /* BEMCheckBox.h */,
+				B84C0ACE1F0F2677009C0D92 /* BEMCheckBox.m */,
+				B84C0ACF1F0F2677009C0D92 /* BEMCheckBoxGroup.h */,
+				B84C0AD01F0F2677009C0D92 /* BEMCheckBoxGroup.m */,
+				B84C0AD11F0F2677009C0D92 /* BEMPathManager.h */,
+				B84C0AD21F0F2677009C0D92 /* BEMPathManager.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		B885A0AC1F022F3B008869B4 = {
 			isa = PBXGroup;
 			children = (
@@ -263,6 +297,7 @@
 		B885A0B71F022F3B008869B4 /* automatic */ = {
 			isa = PBXGroup;
 			children = (
+				B84C0ACA1F0F2677009C0D92 /* Classes */,
 				B8069DE61F0E36C900AA0D27 /* utility */,
 				B885A1531F024D10008869B4 /* XHDatePicker */,
 				B885A1211F022FB4008869B4 /* image */,
@@ -298,6 +333,8 @@
 				B8069DD51F0DE81B00AA0D27 /* thermometer.m */,
 				B8069DE31F0E33DB00AA0D27 /* SettingViewController.h */,
 				B8069DE41F0E33DB00AA0D27 /* SettingViewController.m */,
+				B86D27631F0F6591009333F3 /* ModelViewController.h */,
+				B86D27641F0F6591009333F3 /* ModelViewController.m */,
 			);
 			path = automatic;
 			sourceTree = "<group>";
@@ -331,6 +368,8 @@
 		B885A1211F022FB4008869B4 /* image */ = {
 			isa = PBXGroup;
 			children = (
+				B84C0AC61F0F2410009C0D92 /* 椭圆 1.png */,
+				B84C0AC71F0F2410009C0D92 /* 椭圆.png */,
 				B8069DE11F0E1FCC00AA0D27 /* 左 (3).png */,
 				B8069DD91F0E133900AA0D27 /* 星副本.png */,
 				B8069DD71F0E104600AA0D27 /* 星.png */,
@@ -535,6 +574,7 @@
 				B8069DD11F0DE15700AA0D27 /* water.jpg in Resources */,
 				B885A1341F022FBE008869B4 /* back3.png in Resources */,
 				B8069DCF1F0DDF9F00AA0D27 /* pink.jpg in Resources */,
+				B84C0AC91F0F2410009C0D92 /* 椭圆.png in Resources */,
 				B885A13E1F022FBE008869B4 /* 左 (2).png in Resources */,
 				B8069DDC1F0E145100AA0D27 /* 月亮.png in Resources */,
 				B885A1411F022FBE008869B4 /* 开关.png in Resources */,
@@ -555,6 +595,7 @@
 				B885A1401F022FBE008869B4 /* 进入.png in Resources */,
 				B8069DCD1F0DDAB300AA0D27 /* menu.png in Resources */,
 				B885A1351F022FBE008869B4 /* back4.png in Resources */,
+				B84C0AC81F0F2410009C0D92 /* 椭圆 1.png in Resources */,
 				B885A13D1F022FBE008869B4 /* 操作_手动.png in Resources */,
 				B885A0C51F022F3B008869B4 /* Assets.xcassets in Resources */,
 				B885A1321F022FBE008869B4 /* back1.png in Resources */,
@@ -636,13 +677,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				B82353FF1F064E3500A9EC00 /* WaveProgressView.swift in Sources */,
+				B84C0AD61F0F2677009C0D92 /* BEMPathManager.m in Sources */,
 				B885A1501F02406C008869B4 /* DateConfigViewController.m in Sources */,
 				B8069DE51F0E33DB00AA0D27 /* SettingViewController.m in Sources */,
 				B82354041F064E3D00A9EC00 /* Display.m in Sources */,
 				B885A1631F025FE3008869B4 /* CalendarViewController.m in Sources */,
+				B84C0AD31F0F2677009C0D92 /* BEMAnimationManager.m in Sources */,
 				B8069DD61F0DE81B00AA0D27 /* thermometer.m in Sources */,
 				B885A0C01F022F3B008869B4 /* ViewController.m in Sources */,
 				B82354121F064FB900A9EC00 /* tempViewController.m in Sources */,
+				B84C0AD51F0F2677009C0D92 /* BEMCheckBoxGroup.m in Sources */,
+				B86D27651F0F6591009333F3 /* ModelViewController.m in Sources */,
 				B885A15D1F024D10008869B4 /* NSDate+Extension.m in Sources */,
 				B885A15E1F024D10008869B4 /* UIView+Extension.m in Sources */,
 				B8069DE91F0E36E000AA0D27 /* ShikiSetpter.m in Sources */,
@@ -653,6 +698,7 @@
 				B82354051F064E3D00A9EC00 /* tempView.m in Sources */,
 				B8069DCB1F0DD2CC00AA0D27 /* AutoViewController.m in Sources */,
 				B885A0BA1F022F3B008869B4 /* main.m in Sources */,
+				B84C0AD41F0F2677009C0D92 /* BEMCheckBox.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

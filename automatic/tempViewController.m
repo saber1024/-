@@ -11,6 +11,9 @@
 #import "Chameleon.h"
 #import "tempView.h"
 #import "automatic-Swift.h"
+#import "SettingViewController.h"
+#import "AutoViewController.h"
+#import "ViewController.h"
 int flag = 0;
 @interface tempViewController ()
 @property(nonatomic,strong)CAShapeLayer *up;
@@ -89,12 +92,6 @@ int flag = 0;
     [self.vi addSubview:self.downtemp];
     
     
-    UIButton *close = [[UIButton alloc]initWithFrame:CGRectMake(15, 30, 25, 25)];
-    [close setImage:[UIImage imageNamed:@"back"] forState:0];
-    [close addTarget:self action:@selector(DismissCon) forControlEvents:UIControlEventTouchUpInside];
-    [self.vi addSubview:close];
-    
-    
     UILabel *la = [[UILabel alloc]initWithFrame:CGRectMake(45, self.frontView.frame.size.height - 130, 120, 30)];
     la.text = [NSString stringWithFormat:@"%g℃",self.currentTemp];
     la.font = [UIFont systemFontOfSize:25];
@@ -145,15 +142,29 @@ int flag = 0;
     [self.settemp addGestureRecognizer:sipe1];
     
     
-    UIImageView *heat = [[UIImageView alloc]initWithFrame:CGRectMake(30, self.view.frame.size.height  - 100, 30, 30)];
+    NSArray *btnimg  = @[@"开关",@"时钟",@"自动",@"风车"];
+    for (int i = 0; i<4; i++) {
+        UIView *func = [[UIView alloc]initWithFrame:CGRectMake(i *(self.view.frame.size.width / 4), self.view.frame.size.height - 80, self.view.frame.size.width/4, 80)];
+        func.layer.borderWidth = 0.5;
+        func.layer.borderColor = [UIColor whiteColor].CGColor;
+        func.backgroundColor = [UIColor clearColor];
+        [self.view addSubview:func];
+        UIButton *open = [[UIButton alloc]initWithFrame:CGRectMake(26, 20, 40, 40)];
+        open.tag  = 1000+i;
+        [open addTarget:self action:@selector(BtnFunction:) forControlEvents:UIControlEventTouchUpInside];
+        [open setImage:[UIImage imageNamed:btnimg[i]] forState:0];
+        [func addSubview:open];
+    }
+    
+    UIImageView *heat = [[UIImageView alloc]initWithFrame:CGRectMake(30, self.view.frame.size.height  - 140, 30, 30)];
     heat.image = [UIImage imageNamed:@"加热"];
     [self.vi addSubview:heat];
     
-    UIImageView *manul = [[UIImageView alloc]initWithFrame:CGRectMake(80, self.view.frame.size.height - 100, 30, 30)];
+    UIImageView *manul = [[UIImageView alloc]initWithFrame:CGRectMake(80, self.view.frame.size.height - 140, 30, 30)];
     manul.image = [UIImage imageNamed:@"操作_手动"];
     [self.vi addSubview:manul];
     
-    UIImageView *run = [[UIImageView alloc]initWithFrame:CGRectMake(130, self.view.frame.size.height - 100, 30, 30)];
+    UIImageView *run = [[UIImageView alloc]initWithFrame:CGRectMake(130, self.view.frame.size.height - 140, 30, 30)];
     run.image = [UIImage imageNamed:@"风量4"];
     run.tag = 100002;
     [self.vi addSubview:run];
@@ -173,7 +184,7 @@ int flag = 0;
     
 
     
-    UIButton *open = [[UIButton alloc]initWithFrame:CGRectMake(180, self.view.frame.size.height - 100, 120, 40)];
+    UIButton *open = [[UIButton alloc]initWithFrame:CGRectMake(180, self.view.frame.size.height - 140, 120, 40)];
     [open setTitle:@"强制开启" forState:0];
     open.layer.cornerRadius = 10;
     [open addTarget:self action:@selector(ChangeValueFlag:) forControlEvents:UIControlEventTouchUpInside];
@@ -182,6 +193,29 @@ int flag = 0;
     open.layer.borderColor = [UIColor whiteColor].CGColor;
     [self.vi addSubview:open];
     
+}
+
+
+-(void)BtnFunction:(UIButton *)sender{
+    if (sender.tag == 1002
+        ) {
+        AutoViewController *tp = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]]instantiateViewControllerWithIdentifier:@"auto"];
+        [self presentViewController:tp animated:YES completion:nil];
+    }else if (sender.tag == 1001){
+        ViewController *vc = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"vcx"];
+        [self presentViewController:vc animated:YES completion:nil];
+    }else if (sender.tag == 1003){
+        SettingViewController *se = [[SettingViewController alloc]init];
+        [self presentViewController:se animated:YES completion:nil];
+    }else if(sender.tag == 1000){
+        UIAlertController *aler = [UIAlertController alertControllerWithTitle:@"是否强制关机" message:@"将强制关闭整个系统" preferredStyle:1];
+        UIAlertAction *action = [UIAlertAction actionWithTitle:@"不关闭!" style:0 handler:nil];;
+        UIAlertAction *action1 = [UIAlertAction actionWithTitle:@"关闭" style:0 handler:nil];
+        [aler addAction:action];
+        [aler addAction:action1];
+        [self presentViewController:aler animated:YES completion:nil];
+    }
+
 }
 
 -(void)ChangeValueFlag:(UIButton *)sender{
@@ -197,9 +231,7 @@ int flag = 0;
 }
 
 
--(void)DismissCon{
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
+
 
 -(void)SwipeNumber:(UISwipeGestureRecognizer *)sender{
     

@@ -7,7 +7,10 @@
 //
 
 #import "AppDelegate.h"
-
+#import "CalendarViewController.h"
+#import "ModelViewController.h"
+#import "AutoViewController.h"
+#import "tempViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -16,7 +19,36 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+
+    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.backgroundColor = [UIColor clearColor];
+
+    // 取得沙盒目录
+    NSString *localPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+    // 要检查的文件目录
+    NSString *filePath = [localPath  stringByAppendingPathComponent:@"ManualMode.txt"];
+    NSString *filePath1 = [localPath  stringByAppendingPathComponent:@"Automode.txt"];
+
+    
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    if ([fileManager fileExistsAtPath:filePath]) {
+        CalendarViewController *ca = [[CalendarViewController alloc]init];
+        self.window.rootViewController = ca;
+
+    }
+    
+    if ([fileManager fileExistsAtPath:filePath1]) {
+        tempViewController *tp = [[tempViewController alloc]init];
+        self.window.rootViewController =  tp;
+    }
+    
+    if (![fileManager fileExistsAtPath:filePath1] && ![fileManager fileExistsAtPath:filePath1]) {
+        ModelViewController *mode = [[ModelViewController alloc]init];
+        self.window.rootViewController = mode;
+    }
+    
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 

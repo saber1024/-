@@ -118,6 +118,15 @@ BOOL ismaualopen  =false;
     run.tag = 100002;
     [self.view addSubview:run];
     
+    UIImageView *heat = [[UIImageView alloc]initWithFrame:CGRectMake(self.view.frame.size.width - 60, 205, 30, 30)];
+    heat.image = [UIImage imageNamed:@"加热"];
+    [self.view addSubview:heat];
+    
+    UIImageView *automaticly = [[UIImageView alloc]initWithFrame:CGRectMake(self.view.frame.size.width - 60, 265, 30, 30)];
+    automaticly.image = [UIImage imageNamed:@"自动"];
+    [self.view addSubview:automaticly];
+    
+    
     CABasicAnimation* rotationAnimation;
     rotationAnimation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
     rotationAnimation.toValue = [NSNumber numberWithFloat: M_PI * 2.0 ];
@@ -129,39 +138,23 @@ BOOL ismaualopen  =false;
     rotationAnimation.fillMode = kCAFillModeForwards;
     [run.layer addAnimation:rotationAnimation forKey:nil];
     
-    UIImageView *moon = [[UIImageView alloc]initWithFrame:CGRectMake(30, self.view.frame.size.height - 45, 30, 30)];
-    moon.image = [UIImage imageNamed:@"月亮"];
-    [self.view addSubview:moon];
-    
-    
-    for (int i = 0; i<7; i++) {
-       
-        UIImageView *img =  [[UIImageView alloc]initWithFrame:CGRectMake(65 + i * 10 , self.view.frame.size.height - [self getRandomNumber:40 to:60], 10, 10)];
-        img.image = [UIImage imageNamed:@"星副本"];
-        CAGradientLayer *gradient = [CAGradientLayer layer];
-        gradient.frame = img.frame;
-        gradient.colors = [NSArray arrayWithObjects:(id)[[UIColor whiteColor]CGColor], (id)[[UIColor flatWhiteColor] CGColor], nil];
-        [img.layer addSublayer:gradient];
-        
-        [self.view addSubview:img];
-    }
-    
-    
-    self.maualview = [[UIView alloc]initWithFrame:CGRectMake(110, self.view.frame.size.height - 100, self.view.frame.size.width - 115, 100)];
-    _maualview.backgroundColor = [UIColor clearColor];
-    [self.view addSubview:_maualview];
-    NSArray *btnimg  = @[@"开关",@"时钟",@"自动",@"风车"];
 
+    
+    NSArray *btnimg  = @[@"开关",@"时钟",@"操作_手动",@"风车"];
     for (int i = 0; i<4; i++) {
-        UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(30 + i * _maualview.frame.size.width / 4, 40, 40, 40)];
-        btn.tag  = 1000+i;
-        [btn addTarget:self action:@selector(BtnFunction:) forControlEvents:UIControlEventTouchUpInside];
-        [btn setImage:[UIImage imageNamed:btnimg[i]] forState:0];
-        [_maualview addSubview:btn];
+        UIView *func = [[UIView alloc]initWithFrame:CGRectMake(i *(self.view.frame.size.width / 4), self.view.frame.size.height - 80, self.view.frame.size.width/4, 80)];
+        func.layer.borderWidth = 0.5;
+        func.layer.borderColor = [UIColor whiteColor].CGColor;
+        func.backgroundColor = [UIColor clearColor];
+        [self.view addSubview:func];
+        UIButton *open = [[UIButton alloc]initWithFrame:CGRectMake(26, 20, 40, 40)];
+        open.tag  = 1000+i;
+        [open addTarget:self action:@selector(BtnFunction:) forControlEvents:UIControlEventTouchUpInside];
+        [open setImage:[UIImage imageNamed:btnimg[i]] forState:0];
+        [func addSubview:open];
     }
-    CGRect recmanua = self.maualview.frame;
-    recmanua.origin.x += self.view.frame.size.width;
-    self.maualview.frame = recmanua;
+    
+    
     
     CABasicAnimation *anileft = [CABasicAnimation animationWithKeyPath:@"transform.translation.x"];
     anileft.toValue = @(-10);
@@ -169,12 +162,7 @@ BOOL ismaualopen  =false;
     anileft.duration = 1.2;
     anileft.repeatCount = INFINITY;
     
-    self.openpanel = [[UIButton alloc]initWithFrame:CGRectMake(self.view.frame.size.width - 40, self.view.frame.size.height - 100, 30, 30)];
-    [self.openpanel setImage:[UIImage imageNamed:@"左 (2)"] forState:0];
-
-    [self.openpanel addTarget:self action:@selector(OpenMaunl:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:self.openpanel];
-    [self.openpanel.layer addAnimation:anileft forKey:nil];
+  
     
     self.leftview = [[UIView alloc]initWithFrame:CGRectMake(self.view.frame.size.width - 170, 70, 170, 300)];
     self.leftview.hidden = true;
@@ -240,27 +228,7 @@ BOOL ismaualopen  =false;
 }
 
 
--(void)OpenMaunl:(UIButton *)sender{
-    if (ismaualopen == false) {
-        [UIView animateWithDuration:0.5 animations:^{
-            CGRect rec = self.maualview.frame;
-            rec.origin.x -= self.view.frame.size.width;
-            self.maualview.frame = rec;
-            ismaualopen = true;
-            [self.openpanel setImage:[UIImage imageNamed:@"左 (1)"] forState:0];
-        }];
-    }else{
-        [UIView animateWithDuration:0.5 animations:^{
-            CGRect rec = self.maualview.frame;
-            rec.origin.x += self.view.frame.size.width;
-            self.maualview.frame = rec;
-            ismaualopen = false;
-            [self.openpanel setImage:[UIImage imageNamed:@"左 (2)"] forState:0];
-        }];
-    }
-    
-    
-}
+
 
 
 -(void)BtnFunction:(UIButton *)sender{
@@ -273,7 +241,15 @@ BOOL ismaualopen  =false;
     }else if (sender.tag == 1003){
         SettingViewController *se = [[SettingViewController alloc]init];
         [self presentViewController:se animated:YES completion:nil];
+    }else if(sender.tag == 1000){
+        UIAlertController *aler = [UIAlertController alertControllerWithTitle:@"是否强制关机" message:@"将强制关闭整个系统" preferredStyle:1];
+        UIAlertAction *action = [UIAlertAction actionWithTitle:@"不关闭!" style:0 handler:nil];;
+        UIAlertAction *action1 = [UIAlertAction actionWithTitle:@"关闭" style:0 handler:nil];
+        [aler addAction:action];
+        [aler addAction:action1];
+        [self presentViewController:aler animated:YES completion:nil];
     }
+
 }
 
 

@@ -87,9 +87,9 @@
 }
 
 -(void)Dataset{
-//    CalendarViewController *ca = [[CalendarViewController alloc]init];
-//    
-//    [self presentViewController:ca animated:YES completion:nil];
+    CalendarViewController *ca = [[CalendarViewController alloc]init];
+    
+    [self presentViewController:ca animated:YES completion:nil];
 }
 
 
@@ -156,7 +156,16 @@
     }else if (sender.tag == 1003){
         SettingViewController *se = [[SettingViewController alloc]init];
         [self presentViewController:se animated:YES completion:nil];
-    }}
+    }else if(sender.tag == 1000){
+        UIAlertController *aler = [UIAlertController alertControllerWithTitle:@"是否强制关机" message:@"将强制关闭整个系统" preferredStyle:1];
+        UIAlertAction *action = [UIAlertAction actionWithTitle:@"不关闭!" style:0 handler:nil];;
+        UIAlertAction *action1 = [UIAlertAction actionWithTitle:@"关闭" style:0 handler:nil];
+        [aler addAction:action];
+        [aler addAction:action1];
+        [self presentViewController:aler animated:YES completion:nil];
+    }
+
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

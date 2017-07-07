@@ -16,5 +16,4 @@
 @property(nonatomic,assign)IBInspectable int Step;
 @property(nonatomic,strong)IBInspectable UIColor *BackGroundColor;
 @property(nonatomic,strong)IBInspectable UIColor *titleColor;
-
 @end

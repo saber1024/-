@@ -70,7 +70,7 @@ IB_DESIGNABLE
 -(void)StepValuePlus:(UIButton *)sender{
     UILabel *valuelb = (UILabel *)[self viewWithTag:1001];
     int currvalue = [valuelb.text intValue];
-    if (currvalue+_Step < self.StepMaxValue) {
+    if (currvalue+_Step < self.StepMaxValue +1) {
         valuelb.text = [NSString stringWithFormat:@"%d",currvalue + self.Step];
     }
     
@@ -79,7 +79,7 @@ IB_DESIGNABLE
 -(void)StepValueMinus:(UIButton *)sender{
     UILabel *valuelb = (UILabel *)[self viewWithTag:1001];
     int currvalue = [valuelb.text intValue];
-    if (currvalue - _Step > self.SetpminValue) {
+    if (currvalue - _Step > self.SetpminValue - 1) {
         valuelb.text = [NSString stringWithFormat:@"%d",currvalue - self.Step];
 
     }
