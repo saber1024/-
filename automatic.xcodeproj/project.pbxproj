@@ -7,6 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A7E4A289E102748C5D13775 /* libPods-automatic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A43F7019BF4B247DDF5CF13 /* libPods-automatic.a */; };
+		B8069DCB1F0DD2CC00AA0D27 /* AutoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8069DCA1F0DD2CC00AA0D27 /* AutoViewController.m */; };
+		B8069DCD1F0DDAB300AA0D27 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = B8069DCC1F0DDAB300AA0D27 /* menu.png */; };
+		B8069DCF1F0DDF9F00AA0D27 /* pink.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B8069DCE1F0DDF9F00AA0D27 /* pink.jpg */; };
+		B8069DD11F0DE15700AA0D27 /* water.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B8069DD01F0DE15700AA0D27 /* water.jpg */; };
+		B8069DD31F0DE1AA00AA0D27 /* ocean.png in Resources */ = {isa = PBXBuildFile; fileRef = B8069DD21F0DE1AA00AA0D27 /* ocean.png */; };
+		B8069DD61F0DE81B00AA0D27 /* thermometer.m in Sources */ = {isa = PBXBuildFile; fileRef = B8069DD51F0DE81B00AA0D27 /* thermometer.m */; };
+		B8069DD81F0E104600AA0D27 /* 星.png in Resources */ = {isa = PBXBuildFile; fileRef = B8069DD71F0E104600AA0D27 /* 星.png */; };
+		B8069DDA1F0E133900AA0D27 /* 星副本.png in Resources */ = {isa = PBXBuildFile; fileRef = B8069DD91F0E133900AA0D27 /* 星副本.png */; };
+		B8069DDC1F0E145100AA0D27 /* 月亮.png in Resources */ = {isa = PBXBuildFile; fileRef = B8069DDB1F0E145000AA0D27 /* 月亮.png */; };
+		B8069DDE1F0E1D1E00AA0D27 /* 自动.png in Resources */ = {isa = PBXBuildFile; fileRef = B8069DDD1F0E1D1E00AA0D27 /* 自动.png */; };
+		B8069DE01F0E1EEE00AA0D27 /* 打开.png in Resources */ = {isa = PBXBuildFile; fileRef = B8069DDF1F0E1EEE00AA0D27 /* 打开.png */; };
+		B8069DE21F0E1FCC00AA0D27 /* 左 (3).png in Resources */ = {isa = PBXBuildFile; fileRef = B8069DE11F0E1FCC00AA0D27 /* 左 (3).png */; };
+		B8069DE51F0E33DB00AA0D27 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8069DE41F0E33DB00AA0D27 /* SettingViewController.m */; };
+		B8069DE91F0E36E000AA0D27 /* ShikiSetpter.m in Sources */ = {isa = PBXBuildFile; fileRef = B8069DE81F0E36E000AA0D27 /* ShikiSetpter.m */; };
+		B82353FF1F064E3500A9EC00 /* WaveProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82353FE1F064E3500A9EC00 /* WaveProgressView.swift */; };
+		B82354041F064E3D00A9EC00 /* Display.m in Sources */ = {isa = PBXBuildFile; fileRef = B82354011F064E3D00A9EC00 /* Display.m */; };
+		B82354051F064E3D00A9EC00 /* tempView.m in Sources */ = {isa = PBXBuildFile; fileRef = B82354031F064E3D00A9EC00 /* tempView.m */; };
+		B82354121F064FB900A9EC00 /* tempViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B82354111F064FB900A9EC00 /* tempViewController.m */; };
+		B82354131F064FB900A9EC00 /* tempViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B82354111F064FB900A9EC00 /* tempViewController.m */; };
+		B82354141F064FB900A9EC00 /* tempViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B82354111F064FB900A9EC00 /* tempViewController.m */; };
+		B82354161F0650F100A9EC00 /* libChameleonFramework.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B82354151F0650F100A9EC00 /* libChameleonFramework.a */; };
+		B82354181F0650F500A9EC00 /* libFSCalendar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B82354171F0650F500A9EC00 /* libFSCalendar.a */; };
+		B823541A1F06514B00A9EC00 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = B82354191F06514B00A9EC00 /* back.png */; };
+		B823541B1F06514B00A9EC00 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = B82354191F06514B00A9EC00 /* back.png */; };
+		B823541C1F06514B00A9EC00 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = B82354191F06514B00A9EC00 /* back.png */; };
 		B885A0BA1F022F3B008869B4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B885A0B91F022F3B008869B4 /* main.m */; };
 		B885A0BD1F022F3B008869B4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B885A0BC1F022F3B008869B4 /* AppDelegate.m */; };
 		B885A0C01F022F3B008869B4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B885A0BF1F022F3B008869B4 /* ViewController.m */; };
@@ -15,6 +41,39 @@
 		B885A0C81F022F3B008869B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B885A0C61F022F3B008869B4 /* LaunchScreen.storyboard */; };
 		B885A0D31F022F3B008869B4 /* automaticTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B885A0D21F022F3B008869B4 /* automaticTests.m */; };
 		B885A0DE1F022F3B008869B4 /* automaticUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B885A0DD1F022F3B008869B4 /* automaticUITests.m */; };
+		B885A1321F022FBE008869B4 /* back1.png in Resources */ = {isa = PBXBuildFile; fileRef = B885A1221F022FBE008869B4 /* back1.png */; };
+		B885A1331F022FBE008869B4 /* back2.png in Resources */ = {isa = PBXBuildFile; fileRef = B885A1231F022FBE008869B4 /* back2.png */; };
+		B885A1341F022FBE008869B4 /* back3.png in Resources */ = {isa = PBXBuildFile; fileRef = B885A1241F022FBE008869B4 /* back3.png */; };
+		B885A1351F022FBE008869B4 /* back4.png in Resources */ = {isa = PBXBuildFile; fileRef = B885A1251F022FBE008869B4 /* back4.png */; };
+		B885A1361F022FBE008869B4 /* back5.png in Resources */ = {isa = PBXBuildFile; fileRef = B885A1261F022FBE008869B4 /* back5.png */; };
+		B885A1371F022FBE008869B4 /* 帮助.png in Resources */ = {isa = PBXBuildFile; fileRef = B885A1271F022FBE008869B4 /* 帮助.png */; };
+		B885A1381F022FBE008869B4 /* timg.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B885A1281F022FBE008869B4 /* timg.jpeg */; };
+		B885A1391F022FBE008869B4 /* 日历.png in Resources */ = {isa = PBXBuildFile; fileRef = B885A1291F022FBE008869B4 /* 日历.png */; };
+		B885A13A1F022FBE008869B4 /* 风车.png in Resources */ = {isa = PBXBuildFile; fileRef = B885A12A1F022FBE008869B4 /* 风车.png */; };
+		B885A13B1F022FBE008869B4 /* 时钟.png in Resources */ = {isa = PBXBuildFile; fileRef = B885A12B1F022FBE008869B4 /* 时钟.png */; };
+		B885A13C1F022FBE008869B4 /* 加热.png in Resources */ = {isa = PBXBuildFile; fileRef = B885A12C1F022FBE008869B4 /* 加热.png */; };
+		B885A13D1F022FBE008869B4 /* 操作_手动.png in Resources */ = {isa = PBXBuildFile; fileRef = B885A12D1F022FBE008869B4 /* 操作_手动.png */; };
+		B885A13E1F022FBE008869B4 /* 左 (2).png in Resources */ = {isa = PBXBuildFile; fileRef = B885A12E1F022FBE008869B4 /* 左 (2).png */; };
+		B885A13F1F022FBE008869B4 /* 左 (1).png in Resources */ = {isa = PBXBuildFile; fileRef = B885A12F1F022FBE008869B4 /* 左 (1).png */; };
+		B885A1401F022FBE008869B4 /* 进入.png in Resources */ = {isa = PBXBuildFile; fileRef = B885A1301F022FBE008869B4 /* 进入.png */; };
+		B885A1411F022FBE008869B4 /* 开关.png in Resources */ = {isa = PBXBuildFile; fileRef = B885A1311F022FBE008869B4 /* 开关.png */; };
+		B885A1431F02329D008869B4 /* 添加.png in Resources */ = {isa = PBXBuildFile; fileRef = B885A1421F02329D008869B4 /* 添加.png */; };
+		B885A14A1F0236D2008869B4 /* ListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B885A1481F0236D2008869B4 /* ListTableViewCell.m */; };
+		B885A14B1F0236D2008869B4 /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B885A1491F0236D2008869B4 /* ListTableViewCell.xib */; };
+		B885A14D1F023BF0008869B4 /* morning.png in Resources */ = {isa = PBXBuildFile; fileRef = B885A14C1F023BF0008869B4 /* morning.png */; };
+		B885A1501F02406C008869B4 /* DateConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B885A14F1F02406C008869B4 /* DateConfigViewController.m */; };
+		B885A1521F024536008869B4 /* ba.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B885A1511F024536008869B4 /* ba.jpeg */; };
+		B885A15D1F024D10008869B4 /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = B885A1561F024D10008869B4 /* NSDate+Extension.m */; };
+		B885A15E1F024D10008869B4 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = B885A1581F024D10008869B4 /* UIView+Extension.m */; };
+		B885A15F1F024D10008869B4 /* XHDatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = B885A15B1F024D10008869B4 /* XHDatePickerView.m */; };
+		B885A1601F024D10008869B4 /* XHDatePickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B885A15C1F024D10008869B4 /* XHDatePickerView.xib */; };
+		B885A1631F025FE3008869B4 /* CalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B885A1621F025FE3008869B4 /* CalendarViewController.m */; };
+		B894644C1F0B8725008180D4 /* 风量4.png in Resources */ = {isa = PBXBuildFile; fileRef = B894644B1F0B8725008180D4 /* 风量4.png */; };
+		B8DB31321F0CBA5B0063B5D3 /* 向上 (1).png in Resources */ = {isa = PBXBuildFile; fileRef = B8DB31311F0CBA5B0063B5D3 /* 向上 (1).png */; };
+		B8DB31341F0CBA5F0063B5D3 /* 向下.png in Resources */ = {isa = PBXBuildFile; fileRef = B8DB31331F0CBA5F0063B5D3 /* 向下.png */; };
+		B8DB31361F0CBC1A0063B5D3 /* 向上32px.png in Resources */ = {isa = PBXBuildFile; fileRef = B8DB31351F0CBC1A0063B5D3 /* 向上32px.png */; };
+		B8DB31381F0CBC560063B5D3 /* 向下32px.png in Resources */ = {isa = PBXBuildFile; fileRef = B8DB31371F0CBC560063B5D3 /* 向下32px.png */; };
+		B8DB31401F0CD8C30063B5D3 /* AutoView.m in Sources */ = {isa = PBXBuildFile; fileRef = B8DB313F1F0CD8C30063B5D3 /* AutoView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +94,38 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		36DD476838B6F8D7348D794E /* Pods-automatic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-automatic.debug.xcconfig"; path = "Pods/Target Support Files/Pods-automatic/Pods-automatic.debug.xcconfig"; sourceTree = "<group>"; };
+		9A43F7019BF4B247DDF5CF13 /* libPods-automatic.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-automatic.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8069DCA1F0DD2CC00AA0D27 /* AutoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoViewController.m; sourceTree = "<group>"; };
+		B8069DCC1F0DDAB300AA0D27 /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
+		B8069DCE1F0DDF9F00AA0D27 /* pink.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pink.jpg; sourceTree = "<group>"; };
+		B8069DD01F0DE15700AA0D27 /* water.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = water.jpg; sourceTree = "<group>"; };
+		B8069DD21F0DE1AA00AA0D27 /* ocean.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ocean.png; sourceTree = "<group>"; };
+		B8069DD41F0DE81B00AA0D27 /* thermometer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = thermometer.h; sourceTree = "<group>"; };
+		B8069DD51F0DE81B00AA0D27 /* thermometer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = thermometer.m; sourceTree = "<group>"; };
+		B8069DD71F0E104600AA0D27 /* 星.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "星.png"; sourceTree = "<group>"; };
+		B8069DD91F0E133900AA0D27 /* 星副本.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "星副本.png"; sourceTree = "<group>"; };
+		B8069DDB1F0E145000AA0D27 /* 月亮.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "月亮.png"; path = "automatic/月亮.png"; sourceTree = "<group>"; };
+		B8069DDD1F0E1D1E00AA0D27 /* 自动.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "自动.png"; sourceTree = "<group>"; };
+		B8069DDF1F0E1EEE00AA0D27 /* 打开.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "打开.png"; sourceTree = "<group>"; };
+		B8069DE11F0E1FCC00AA0D27 /* 左 (3).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "左 (3).png"; sourceTree = "<group>"; };
+		B8069DE31F0E33DB00AA0D27 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
+		B8069DE41F0E33DB00AA0D27 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
+		B8069DE71F0E36E000AA0D27 /* ShikiSetpter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShikiSetpter.h; sourceTree = "<group>"; };
+		B8069DE81F0E36E000AA0D27 /* ShikiSetpter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShikiSetpter.m; sourceTree = "<group>"; };
+		B82353FE1F064E3500A9EC00 /* WaveProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaveProgressView.swift; sourceTree = "<group>"; };
+		B82354001F064E3D00A9EC00 /* Display.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Display.h; sourceTree = "<group>"; };
+		B82354011F064E3D00A9EC00 /* Display.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Display.m; sourceTree = "<group>"; };
+		B82354021F064E3D00A9EC00 /* tempView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tempView.h; sourceTree = "<group>"; };
+		B82354031F064E3D00A9EC00 /* tempView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tempView.m; sourceTree = "<group>"; };
+		B82354091F064F2000A9EC00 /* automaticTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "automaticTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		B823540A1F064F2000A9EC00 /* automaticUITests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "automaticUITests-Bridging-Header.h"; sourceTree = "<group>"; };
+		B823540F1F064F6E00A9EC00 /* automatic-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "automatic-Bridging-Header.h"; sourceTree = "<group>"; };
+		B82354101F064FB900A9EC00 /* tempViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tempViewController.h; sourceTree = "<group>"; };
+		B82354111F064FB900A9EC00 /* tempViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tempViewController.m; sourceTree = "<group>"; };
+		B82354151F0650F100A9EC00 /* libChameleonFramework.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libChameleonFramework.a; path = "../../Library/Developer/Xcode/DerivedData/automatic-edxgrmszhfjvjcanxrgmewisngzu/Build/Products/Debug-iphoneos/ChameleonFramework/libChameleonFramework.a"; sourceTree = "<group>"; };
+		B82354171F0650F500A9EC00 /* libFSCalendar.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libFSCalendar.a; path = "../../Library/Developer/Xcode/DerivedData/automatic-edxgrmszhfjvjcanxrgmewisngzu/Build/Products/Debug-iphoneos/FSCalendar/libFSCalendar.a"; sourceTree = "<group>"; };
+		B82354191F06514B00A9EC00 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
 		B885A0B51F022F3B008869B4 /* automatic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = automatic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B885A0B91F022F3B008869B4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B885A0BB1F022F3B008869B4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -51,6 +142,48 @@
 		B885A0D91F022F3B008869B4 /* automaticUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = automaticUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B885A0DD1F022F3B008869B4 /* automaticUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = automaticUITests.m; sourceTree = "<group>"; };
 		B885A0DF1F022F3B008869B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B885A1221F022FBE008869B4 /* back1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back1.png; sourceTree = "<group>"; };
+		B885A1231F022FBE008869B4 /* back2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back2.png; sourceTree = "<group>"; };
+		B885A1241F022FBE008869B4 /* back3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back3.png; sourceTree = "<group>"; };
+		B885A1251F022FBE008869B4 /* back4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back4.png; sourceTree = "<group>"; };
+		B885A1261F022FBE008869B4 /* back5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back5.png; sourceTree = "<group>"; };
+		B885A1271F022FBE008869B4 /* 帮助.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "帮助.png"; sourceTree = "<group>"; };
+		B885A1281F022FBE008869B4 /* timg.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = timg.jpeg; sourceTree = "<group>"; };
+		B885A1291F022FBE008869B4 /* 日历.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "日历.png"; sourceTree = "<group>"; };
+		B885A12A1F022FBE008869B4 /* 风车.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "风车.png"; sourceTree = "<group>"; };
+		B885A12B1F022FBE008869B4 /* 时钟.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "时钟.png"; sourceTree = "<group>"; };
+		B885A12C1F022FBE008869B4 /* 加热.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "加热.png"; sourceTree = "<group>"; };
+		B885A12D1F022FBE008869B4 /* 操作_手动.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "操作_手动.png"; sourceTree = "<group>"; };
+		B885A12E1F022FBE008869B4 /* 左 (2).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "左 (2).png"; sourceTree = "<group>"; };
+		B885A12F1F022FBE008869B4 /* 左 (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "左 (1).png"; sourceTree = "<group>"; };
+		B885A1301F022FBE008869B4 /* 进入.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "进入.png"; sourceTree = "<group>"; };
+		B885A1311F022FBE008869B4 /* 开关.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "开关.png"; sourceTree = "<group>"; };
+		B885A1421F02329D008869B4 /* 添加.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "添加.png"; sourceTree = "<group>"; };
+		B885A1471F0236D2008869B4 /* ListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListTableViewCell.h; sourceTree = "<group>"; };
+		B885A1481F0236D2008869B4 /* ListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListTableViewCell.m; sourceTree = "<group>"; };
+		B885A1491F0236D2008869B4 /* ListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListTableViewCell.xib; sourceTree = "<group>"; };
+		B885A14C1F023BF0008869B4 /* morning.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = morning.png; sourceTree = "<group>"; };
+		B885A14E1F02406C008869B4 /* DateConfigViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateConfigViewController.h; sourceTree = "<group>"; };
+		B885A14F1F02406C008869B4 /* DateConfigViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateConfigViewController.m; sourceTree = "<group>"; };
+		B885A1511F024536008869B4 /* ba.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ba.jpeg; sourceTree = "<group>"; };
+		B885A1551F024D10008869B4 /* NSDate+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Extension.h"; sourceTree = "<group>"; };
+		B885A1561F024D10008869B4 /* NSDate+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Extension.m"; sourceTree = "<group>"; };
+		B885A1571F024D10008869B4 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		B885A1581F024D10008869B4 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		B885A15A1F024D10008869B4 /* XHDatePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHDatePickerView.h; sourceTree = "<group>"; };
+		B885A15B1F024D10008869B4 /* XHDatePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHDatePickerView.m; sourceTree = "<group>"; };
+		B885A15C1F024D10008869B4 /* XHDatePickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XHDatePickerView.xib; sourceTree = "<group>"; };
+		B885A1611F025FE3008869B4 /* CalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarViewController.h; sourceTree = "<group>"; };
+		B885A1621F025FE3008869B4 /* CalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarViewController.m; sourceTree = "<group>"; };
+		B894644B1F0B8725008180D4 /* 风量4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "风量4.png"; path = "automatic/风量4.png"; sourceTree = "<group>"; };
+		B8DB31311F0CBA5B0063B5D3 /* 向上 (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "向上 (1).png"; sourceTree = "<group>"; };
+		B8DB31331F0CBA5F0063B5D3 /* 向下.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "向下.png"; sourceTree = "<group>"; };
+		B8DB31351F0CBC1A0063B5D3 /* 向上32px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "向上32px.png"; sourceTree = "<group>"; };
+		B8DB31371F0CBC560063B5D3 /* 向下32px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "向下32px.png"; sourceTree = "<group>"; };
+		B8DB31391F0CD5BF0063B5D3 /* AutoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoViewController.h; sourceTree = "<group>"; };
+		B8DB313E1F0CD8C30063B5D3 /* AutoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoView.h; sourceTree = "<group>"; };
+		B8DB313F1F0CD8C30063B5D3 /* AutoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoView.m; sourceTree = "<group>"; };
+		BBAB3DEB38E22CCA449E0731 /* Pods-automatic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-automatic.release.xcconfig"; path = "Pods/Target Support Files/Pods-automatic/Pods-automatic.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +191,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B82354181F0650F500A9EC00 /* libFSCalendar.a in Frameworks */,
+				B82354161F0650F100A9EC00 /* libChameleonFramework.a in Frameworks */,
+				1A7E4A289E102748C5D13775 /* libPods-automatic.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,13 +214,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1594E03B21CADA491C0AE674 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				36DD476838B6F8D7348D794E /* Pods-automatic.debug.xcconfig */,
+				BBAB3DEB38E22CCA449E0731 /* Pods-automatic.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B8069DE61F0E36C900AA0D27 /* utility */ = {
+			isa = PBXGroup;
+			children = (
+				B8069DE71F0E36E000AA0D27 /* ShikiSetpter.h */,
+				B8069DE81F0E36E000AA0D27 /* ShikiSetpter.m */,
+			);
+			name = utility;
+			sourceTree = "<group>";
+		};
 		B885A0AC1F022F3B008869B4 = {
 			isa = PBXGroup;
 			children = (
+				B8069DDB1F0E145000AA0D27 /* 月亮.png */,
+				B894644B1F0B8725008180D4 /* 风量4.png */,
+				B823540F1F064F6E00A9EC00 /* automatic-Bridging-Header.h */,
 				B885A0B71F022F3B008869B4 /* automatic */,
+				B8069DDF1F0E1EEE00AA0D27 /* 打开.png */,
 				B885A0D11F022F3B008869B4 /* automaticTests */,
 				B885A0DC1F022F3B008869B4 /* automaticUITests */,
 				B885A0B61F022F3B008869B4 /* Products */,
+				1594E03B21CADA491C0AE674 /* Pods */,
+				EED2A5598EFB6E3135B9F716 /* Frameworks */,
+				B82354091F064F2000A9EC00 /* automaticTests-Bridging-Header.h */,
+				B823540A1F064F2000A9EC00 /* automaticUITests-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,15 +263,41 @@
 		B885A0B71F022F3B008869B4 /* automatic */ = {
 			isa = PBXGroup;
 			children = (
+				B8069DE61F0E36C900AA0D27 /* utility */,
+				B885A1531F024D10008869B4 /* XHDatePicker */,
+				B885A1211F022FB4008869B4 /* image */,
+				B8069DDD1F0E1D1E00AA0D27 /* 自动.png */,
 				B885A0BB1F022F3B008869B4 /* AppDelegate.h */,
 				B885A0BC1F022F3B008869B4 /* AppDelegate.m */,
 				B885A0BE1F022F3B008869B4 /* ViewController.h */,
 				B885A0BF1F022F3B008869B4 /* ViewController.m */,
+				B82354101F064FB900A9EC00 /* tempViewController.h */,
+				B82354111F064FB900A9EC00 /* tempViewController.m */,
 				B885A0C11F022F3B008869B4 /* Main.storyboard */,
 				B885A0C41F022F3B008869B4 /* Assets.xcassets */,
 				B885A0C61F022F3B008869B4 /* LaunchScreen.storyboard */,
 				B885A0C91F022F3B008869B4 /* Info.plist */,
 				B885A0B81F022F3B008869B4 /* Supporting Files */,
+				B885A1471F0236D2008869B4 /* ListTableViewCell.h */,
+				B885A1481F0236D2008869B4 /* ListTableViewCell.m */,
+				B885A1491F0236D2008869B4 /* ListTableViewCell.xib */,
+				B885A14E1F02406C008869B4 /* DateConfigViewController.h */,
+				B885A14F1F02406C008869B4 /* DateConfigViewController.m */,
+				B885A1611F025FE3008869B4 /* CalendarViewController.h */,
+				B885A1621F025FE3008869B4 /* CalendarViewController.m */,
+				B82353FE1F064E3500A9EC00 /* WaveProgressView.swift */,
+				B82354001F064E3D00A9EC00 /* Display.h */,
+				B82354011F064E3D00A9EC00 /* Display.m */,
+				B82354021F064E3D00A9EC00 /* tempView.h */,
+				B82354031F064E3D00A9EC00 /* tempView.m */,
+				B8DB31391F0CD5BF0063B5D3 /* AutoViewController.h */,
+				B8069DCA1F0DD2CC00AA0D27 /* AutoViewController.m */,
+				B8DB313E1F0CD8C30063B5D3 /* AutoView.h */,
+				B8DB313F1F0CD8C30063B5D3 /* AutoView.m */,
+				B8069DD41F0DE81B00AA0D27 /* thermometer.h */,
+				B8069DD51F0DE81B00AA0D27 /* thermometer.m */,
+				B8069DE31F0E33DB00AA0D27 /* SettingViewController.h */,
+				B8069DE41F0E33DB00AA0D27 /* SettingViewController.m */,
 			);
 			path = automatic;
 			sourceTree = "<group>";
@@ -140,6 +328,84 @@
 			path = automaticUITests;
 			sourceTree = "<group>";
 		};
+		B885A1211F022FB4008869B4 /* image */ = {
+			isa = PBXGroup;
+			children = (
+				B8069DE11F0E1FCC00AA0D27 /* 左 (3).png */,
+				B8069DD91F0E133900AA0D27 /* 星副本.png */,
+				B8069DD71F0E104600AA0D27 /* 星.png */,
+				B8069DD21F0DE1AA00AA0D27 /* ocean.png */,
+				B8069DD01F0DE15700AA0D27 /* water.jpg */,
+				B8069DCE1F0DDF9F00AA0D27 /* pink.jpg */,
+				B8069DCC1F0DDAB300AA0D27 /* menu.png */,
+				B8DB31371F0CBC560063B5D3 /* 向下32px.png */,
+				B8DB31351F0CBC1A0063B5D3 /* 向上32px.png */,
+				B8DB31331F0CBA5F0063B5D3 /* 向下.png */,
+				B8DB31311F0CBA5B0063B5D3 /* 向上 (1).png */,
+				B82354191F06514B00A9EC00 /* back.png */,
+				B885A1511F024536008869B4 /* ba.jpeg */,
+				B885A14C1F023BF0008869B4 /* morning.png */,
+				B885A1421F02329D008869B4 /* 添加.png */,
+				B885A1221F022FBE008869B4 /* back1.png */,
+				B885A1231F022FBE008869B4 /* back2.png */,
+				B885A1241F022FBE008869B4 /* back3.png */,
+				B885A1251F022FBE008869B4 /* back4.png */,
+				B885A1261F022FBE008869B4 /* back5.png */,
+				B885A1271F022FBE008869B4 /* 帮助.png */,
+				B885A1281F022FBE008869B4 /* timg.jpeg */,
+				B885A1291F022FBE008869B4 /* 日历.png */,
+				B885A12A1F022FBE008869B4 /* 风车.png */,
+				B885A12B1F022FBE008869B4 /* 时钟.png */,
+				B885A12C1F022FBE008869B4 /* 加热.png */,
+				B885A12D1F022FBE008869B4 /* 操作_手动.png */,
+				B885A12E1F022FBE008869B4 /* 左 (2).png */,
+				B885A12F1F022FBE008869B4 /* 左 (1).png */,
+				B885A1301F022FBE008869B4 /* 进入.png */,
+				B885A1311F022FBE008869B4 /* 开关.png */,
+			);
+			name = image;
+			sourceTree = "<group>";
+		};
+		B885A1531F024D10008869B4 /* XHDatePicker */ = {
+			isa = PBXGroup;
+			children = (
+				B885A1541F024D10008869B4 /* Tools */,
+				B885A1591F024D10008869B4 /* XHDatePicker */,
+			);
+			path = XHDatePicker;
+			sourceTree = "<group>";
+		};
+		B885A1541F024D10008869B4 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				B885A1551F024D10008869B4 /* NSDate+Extension.h */,
+				B885A1561F024D10008869B4 /* NSDate+Extension.m */,
+				B885A1571F024D10008869B4 /* UIView+Extension.h */,
+				B885A1581F024D10008869B4 /* UIView+Extension.m */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		B885A1591F024D10008869B4 /* XHDatePicker */ = {
+			isa = PBXGroup;
+			children = (
+				B885A15A1F024D10008869B4 /* XHDatePickerView.h */,
+				B885A15B1F024D10008869B4 /* XHDatePickerView.m */,
+				B885A15C1F024D10008869B4 /* XHDatePickerView.xib */,
+			);
+			path = XHDatePicker;
+			sourceTree = "<group>";
+		};
+		EED2A5598EFB6E3135B9F716 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B82354171F0650F500A9EC00 /* libFSCalendar.a */,
+				B82354151F0650F100A9EC00 /* libChameleonFramework.a */,
+				9A43F7019BF4B247DDF5CF13 /* libPods-automatic.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,9 +413,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B885A0E21F022F3B008869B4 /* Build configuration list for PBXNativeTarget "automatic" */;
 			buildPhases = (
+				2DA63FB21DC04B47C575684A /* [CP] Check Pods Manifest.lock */,
 				B885A0B11F022F3B008869B4 /* Sources */,
 				B885A0B21F022F3B008869B4 /* Frameworks */,
 				B885A0B31F022F3B008869B4 /* Resources */,
+				E0B8B62CF94939FBA3A4A65D /* [CP] Embed Pods Frameworks */,
+				E8A490203EB4CAC0BA5EF00E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -208,17 +477,20 @@
 					B885A0B41F022F3B008869B4 = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = 4567L96C8J;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 					B885A0CD1F022F3B008869B4 = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = 4567L96C8J;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 						TestTargetID = B885A0B41F022F3B008869B4;
 					};
 					B885A0D81F022F3B008869B4 = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = 4567L96C8J;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 						TestTargetID = B885A0B41F022F3B008869B4;
 					};
@@ -249,9 +521,46 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8069DE01F0E1EEE00AA0D27 /* 打开.png in Resources */,
+				B8069DDA1F0E133900AA0D27 /* 星副本.png in Resources */,
+				B8069DD31F0DE1AA00AA0D27 /* ocean.png in Resources */,
+				B885A1431F02329D008869B4 /* 添加.png in Resources */,
+				B8DB31361F0CBC1A0063B5D3 /* 向上32px.png in Resources */,
+				B885A13C1F022FBE008869B4 /* 加热.png in Resources */,
+				B885A13B1F022FBE008869B4 /* 时钟.png in Resources */,
+				B885A1381F022FBE008869B4 /* timg.jpeg in Resources */,
+				B885A1601F024D10008869B4 /* XHDatePickerView.xib in Resources */,
+				B8DB31381F0CBC560063B5D3 /* 向下32px.png in Resources */,
+				B885A13A1F022FBE008869B4 /* 风车.png in Resources */,
+				B8069DD11F0DE15700AA0D27 /* water.jpg in Resources */,
+				B885A1341F022FBE008869B4 /* back3.png in Resources */,
+				B8069DCF1F0DDF9F00AA0D27 /* pink.jpg in Resources */,
+				B885A13E1F022FBE008869B4 /* 左 (2).png in Resources */,
+				B8069DDC1F0E145100AA0D27 /* 月亮.png in Resources */,
+				B885A1411F022FBE008869B4 /* 开关.png in Resources */,
+				B8DB31341F0CBA5F0063B5D3 /* 向下.png in Resources */,
+				B885A1521F024536008869B4 /* ba.jpeg in Resources */,
 				B885A0C81F022F3B008869B4 /* LaunchScreen.storyboard in Resources */,
+				B823541A1F06514B00A9EC00 /* back.png in Resources */,
+				B8069DD81F0E104600AA0D27 /* 星.png in Resources */,
+				B885A1391F022FBE008869B4 /* 日历.png in Resources */,
+				B885A14D1F023BF0008869B4 /* morning.png in Resources */,
+				B885A13F1F022FBE008869B4 /* 左 (1).png in Resources */,
+				B8DB31321F0CBA5B0063B5D3 /* 向上 (1).png in Resources */,
+				B885A1361F022FBE008869B4 /* back5.png in Resources */,
+				B885A1371F022FBE008869B4 /* 帮助.png in Resources */,
+				B894644C1F0B8725008180D4 /* 风量4.png in Resources */,
+				B885A14B1F0236D2008869B4 /* ListTableViewCell.xib in Resources */,
+				B8069DE21F0E1FCC00AA0D27 /* 左 (3).png in Resources */,
+				B885A1401F022FBE008869B4 /* 进入.png in Resources */,
+				B8069DCD1F0DDAB300AA0D27 /* menu.png in Resources */,
+				B885A1351F022FBE008869B4 /* back4.png in Resources */,
+				B885A13D1F022FBE008869B4 /* 操作_手动.png in Resources */,
 				B885A0C51F022F3B008869B4 /* Assets.xcassets in Resources */,
+				B885A1321F022FBE008869B4 /* back1.png in Resources */,
 				B885A0C31F022F3B008869B4 /* Main.storyboard in Resources */,
+				B885A1331F022FBE008869B4 /* back2.png in Resources */,
+				B8069DDE1F0E1D1E00AA0D27 /* 自动.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +568,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B823541B1F06514B00A9EC00 /* back.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,18 +576,82 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B823541C1F06514B00A9EC00 /* back.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2DA63FB21DC04B47C575684A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E0B8B62CF94939FBA3A4A65D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-automatic/Pods-automatic-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E8A490203EB4CAC0BA5EF00E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-automatic/Pods-automatic-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B885A0B11F022F3B008869B4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B82353FF1F064E3500A9EC00 /* WaveProgressView.swift in Sources */,
+				B885A1501F02406C008869B4 /* DateConfigViewController.m in Sources */,
+				B8069DE51F0E33DB00AA0D27 /* SettingViewController.m in Sources */,
+				B82354041F064E3D00A9EC00 /* Display.m in Sources */,
+				B885A1631F025FE3008869B4 /* CalendarViewController.m in Sources */,
+				B8069DD61F0DE81B00AA0D27 /* thermometer.m in Sources */,
 				B885A0C01F022F3B008869B4 /* ViewController.m in Sources */,
+				B82354121F064FB900A9EC00 /* tempViewController.m in Sources */,
+				B885A15D1F024D10008869B4 /* NSDate+Extension.m in Sources */,
+				B885A15E1F024D10008869B4 /* UIView+Extension.m in Sources */,
+				B8069DE91F0E36E000AA0D27 /* ShikiSetpter.m in Sources */,
+				B885A15F1F024D10008869B4 /* XHDatePickerView.m in Sources */,
+				B8DB31401F0CD8C30063B5D3 /* AutoView.m in Sources */,
+				B885A14A1F0236D2008869B4 /* ListTableViewCell.m in Sources */,
 				B885A0BD1F022F3B008869B4 /* AppDelegate.m in Sources */,
+				B82354051F064E3D00A9EC00 /* tempView.m in Sources */,
+				B8069DCB1F0DD2CC00AA0D27 /* AutoViewController.m in Sources */,
 				B885A0BA1F022F3B008869B4 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -286,6 +660,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B82354131F064FB900A9EC00 /* tempViewController.m in Sources */,
 				B885A0D31F022F3B008869B4 /* automaticTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,6 +669,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B82354141F064FB900A9EC00 /* tempViewController.m in Sources */,
 				B885A0DE1F022F3B008869B4 /* automaticUITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -420,6 +796,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -427,37 +804,62 @@
 		};
 		B885A0E31F022F3B008869B4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36DD476838B6F8D7348D794E /* Pods-automatic.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4567L96C8J;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${SRCROOT}/ChameleonFramework\"",
+					"\"${PODS_ROOT}/Headers/Public/FSCalendar\"",
+				);
 				INFOPLIST_FILE = automatic/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.shiki.test.automatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "automatic-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		B885A0E41F022F3B008869B4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BBAB3DEB38E22CCA449E0731 /* Pods-automatic.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4567L96C8J;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${SRCROOT}/ChameleonFramework\"",
+					"\"${PODS_ROOT}/Headers/Public/FSCalendar\"",
+				);
 				INFOPLIST_FILE = automatic/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.shiki.test.automatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "automatic-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 		B885A0E61F022F3B008869B4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 4567L96C8J;
 				INFOPLIST_FILE = automaticTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.shiki.test.automaticTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "automaticTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/automatic.app/automatic";
 			};
 			name = Debug;
@@ -465,12 +867,16 @@
 		B885A0E71F022F3B008869B4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 4567L96C8J;
 				INFOPLIST_FILE = automaticTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.shiki.test.automaticTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "automaticTests-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/automatic.app/automatic";
 			};
 			name = Release;
@@ -478,11 +884,16 @@
 		B885A0E91F022F3B008869B4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 4567L96C8J;
 				INFOPLIST_FILE = automaticUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.shiki.test.automaticUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "automaticUITests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = automatic;
 			};
 			name = Debug;
@@ -490,11 +901,15 @@
 		B885A0EA1F022F3B008869B4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 4567L96C8J;
 				INFOPLIST_FILE = automaticUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.shiki.test.automaticUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "automaticUITests-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = automatic;
 			};
 			name = Release;
@@ -518,6 +933,7 @@
 				B885A0E41F022F3B008869B4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B885A0E51F022F3B008869B4 /* Build configuration list for PBXNativeTarget "automaticTests" */ = {
 			isa = XCConfigurationList;
@@ -526,6 +942,7 @@
 				B885A0E71F022F3B008869B4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B885A0E81F022F3B008869B4 /* Build configuration list for PBXNativeTarget "automaticUITests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +951,7 @@
 				B885A0EA1F022F3B008869B4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

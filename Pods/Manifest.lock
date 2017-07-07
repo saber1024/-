@@ -1,0 +1,17 @@
+PODS:
+  - ChameleonFramework (2.1.0):
+    - ChameleonFramework/Default (= 2.1.0)
+  - ChameleonFramework/Default (2.1.0)
+  - FSCalendar (2.7.8)
+
+DEPENDENCIES:
+  - ChameleonFramework (~> 2.1.0)
+  - FSCalendar (~> 2.7.8)
+
+SPEC CHECKSUMS:
+  ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
+  FSCalendar: 09369a2bf554ba71cd8e8cfb627e2df22a2c2af4
+
+PODFILE CHECKSUM: 80570910b019a0a1be987589a231624cc2487da0
+
+COCOAPODS: 1.2.1
