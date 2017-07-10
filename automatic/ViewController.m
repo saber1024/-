@@ -14,6 +14,7 @@
 #import "tempViewController.h"
 #import "AutoViewController.h"
 #import "SettingViewController.h"
+#import "ConfigViewController.h"
 @interface DateModle : NSObject
 @property(nonatomic,strong)NSString *tempture;
 @property(nonatomic,strong)NSString *startime;
@@ -39,7 +40,7 @@
     UIVisualEffectView *vi = [[UIVisualEffectView alloc]initWithFrame:self.view.frame];
     vi.effect = blur;
     [self.view addSubview:vi];
-    UIView *back = [[UIView alloc]initWithFrame:CGRectMake(0, self.view.frame.size.height - 80, self.view.frame.size.width, 0.5)];
+    UIView *back = [[UIView alloc]initWithFrame:CGRectMake(0, self.view.frame.size.height - 100, self.view.frame.size.width, 0.5)];
     back.backgroundColor = [UIColor whiteColor];
     [vi addSubview:back];
     
@@ -58,18 +59,28 @@
     [self.dateList registerNib:[UINib nibWithNibName:@"ListTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"list"];
     
     self.datenum = [NSMutableArray array];
-    NSArray *btnimg  = @[@"开关",@"时钟",@"操作_手动",@"风车"];
+    NSArray *btnimg  = @[@"开关",@"时钟",@"手动",@"风车"];
     for (int i = 0; i<4; i++) {
-        UIView *func = [[UIView alloc]initWithFrame:CGRectMake(i *(self.view.frame.size.width / 4), self.view.frame.size.height - 80, self.view.frame.size.width/4, 80)];
+        UIView *func = [[UIView alloc]initWithFrame:CGRectMake(i *(self.view.frame.size.width / 4), self.view.frame.size.height - 100, self.view.frame.size.width/4, 100)];
         func.layer.borderWidth = 0.5;
         func.layer.borderColor = [UIColor whiteColor].CGColor;
         func.backgroundColor = [UIColor clearColor];
         [vi addSubview:func];
-        UIButton *open = [[UIButton alloc]initWithFrame:CGRectMake(26, 20, 40, 40)];
+        UIButton *open = [[UIButton alloc]initWithFrame:CGRectMake(26,20, 40, 40)];
         open.tag  = 1000+i;
         [open addTarget:self action:@selector(BtnFunction:) forControlEvents:UIControlEventTouchUpInside];
         [open setImage:[UIImage imageNamed:btnimg[i]] forState:0];
         [func addSubview:open];
+        
+        UILabel *title = [[UILabel alloc]initWithFrame:CGRectMake(0, 65,func.frame.size.width, 30)];
+        title.text = btnimg[i];
+        title.textAlignment = NSTextAlignmentCenter;
+        title.textColor = [UIColor whiteColor];
+        if (i == 3) {
+            title.text = @"设置";
+        }
+        [func addSubview:title];
+        
     }
     
     UIButton *dateset = [[UIButton alloc]initWithFrame:CGRectMake(self.view.center.x - 80, self.view.frame.size.height - 170, 160, 50)];
@@ -157,12 +168,11 @@
         SettingViewController *se = [[SettingViewController alloc]init];
         [self presentViewController:se animated:YES completion:nil];
     }else if(sender.tag == 1000){
-        UIAlertController *aler = [UIAlertController alertControllerWithTitle:@"是否强制关机" message:@"将强制关闭整个系统" preferredStyle:1];
-        UIAlertAction *action = [UIAlertAction actionWithTitle:@"不关闭!" style:0 handler:nil];;
-        UIAlertAction *action1 = [UIAlertAction actionWithTitle:@"关闭" style:0 handler:nil];
-        [aler addAction:action];
-        [aler addAction:action1];
-        [self presentViewController:aler animated:YES completion:nil];
+        ConfigViewController *con = [[ConfigViewController alloc]init];
+        con.view.frame = self.view.frame;
+        [self addChildViewController:con];
+        [self.view addSubview:con.view];
+        [con.view didMoveToWindow];
     }
 
 }

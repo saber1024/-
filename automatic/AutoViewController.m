@@ -12,6 +12,7 @@
 #import "tempViewController.h"
 #import "ViewController.h"
 #import "SettingViewController.h"
+#import "ConfigViewController.h"
 BOOL isopen = false;
 BOOL ismaualopen  =false;
 @interface AutoViewController ()
@@ -140,18 +141,28 @@ BOOL ismaualopen  =false;
     
 
     
-    NSArray *btnimg  = @[@"开关",@"时钟",@"操作_手动",@"风车"];
+    NSArray *btnimg  = @[@"开关",@"时钟",@"手动",@"风车"];
     for (int i = 0; i<4; i++) {
         UIView *func = [[UIView alloc]initWithFrame:CGRectMake(i *(self.view.frame.size.width / 4), self.view.frame.size.height - 80, self.view.frame.size.width/4, 80)];
         func.layer.borderWidth = 0.5;
         func.layer.borderColor = [UIColor whiteColor].CGColor;
         func.backgroundColor = [UIColor clearColor];
         [self.view addSubview:func];
-        UIButton *open = [[UIButton alloc]initWithFrame:CGRectMake(26, 20, 40, 40)];
+        UIButton *open = [[UIButton alloc]initWithFrame:CGRectMake(26, 10, 40, 40)];
         open.tag  = 1000+i;
         [open addTarget:self action:@selector(BtnFunction:) forControlEvents:UIControlEventTouchUpInside];
         [open setImage:[UIImage imageNamed:btnimg[i]] forState:0];
         [func addSubview:open];
+        
+        UILabel *title = [[UILabel alloc]initWithFrame:CGRectMake(0, 50, func.frame.size.width, 30)];
+        title.text = btnimg[i];
+        if (i == 3) {
+            title.text = @"设置";
+        }
+        title.textColor = [UIColor whiteColor];
+        title.textAlignment = NSTextAlignmentCenter;
+        [func addSubview:title];
+        
     }
     
     
@@ -242,12 +253,11 @@ BOOL ismaualopen  =false;
         SettingViewController *se = [[SettingViewController alloc]init];
         [self presentViewController:se animated:YES completion:nil];
     }else if(sender.tag == 1000){
-        UIAlertController *aler = [UIAlertController alertControllerWithTitle:@"是否强制关机" message:@"将强制关闭整个系统" preferredStyle:1];
-        UIAlertAction *action = [UIAlertAction actionWithTitle:@"不关闭!" style:0 handler:nil];;
-        UIAlertAction *action1 = [UIAlertAction actionWithTitle:@"关闭" style:0 handler:nil];
-        [aler addAction:action];
-        [aler addAction:action1];
-        [self presentViewController:aler animated:YES completion:nil];
+        ConfigViewController *con = [[ConfigViewController alloc]init];
+        con.view.frame = self.view.frame;
+        [self addChildViewController:con];
+        [self.view addSubview:con.view];
+        [con.view didMoveToWindow];
     }
 
 }

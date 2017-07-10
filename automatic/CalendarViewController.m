@@ -9,6 +9,7 @@
 #import "CalendarViewController.h"
 #import "FSCalendar.h"
 #import <Chameleon.h>
+#import "AutoViewController.h"
 #define ScrHeight [UIScreen mainScreen].bounds.size.height
 #define ScrWidth  [UIScreen mainScreen].bounds.size.width
 
@@ -110,9 +111,9 @@
 }
 
 -(void)SaveSetting{
-    
-    
-    [self dismissViewControllerAnimated:YES completion:nil];
+   
+    AutoViewController *tp = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]]instantiateViewControllerWithIdentifier:@"auto"];
+    [self presentViewController:tp animated:YES completion:nil];
 }
 
 -(void)CancelSetting{

@@ -14,6 +14,7 @@
 #import "SettingViewController.h"
 #import "AutoViewController.h"
 #import "ViewController.h"
+#import "ConfigViewController.h"
 int flag = 0;
 @interface tempViewController ()
 @property(nonatomic,strong)CAShapeLayer *up;
@@ -144,27 +145,36 @@ int flag = 0;
     
     NSArray *btnimg  = @[@"开关",@"时钟",@"自动",@"风车"];
     for (int i = 0; i<4; i++) {
-        UIView *func = [[UIView alloc]initWithFrame:CGRectMake(i *(self.view.frame.size.width / 4), self.view.frame.size.height - 80, self.view.frame.size.width/4, 80)];
+        UIView *func = [[UIView alloc]initWithFrame:CGRectMake(i *(self.view.frame.size.width / 4), self.view.frame.size.height - 100, self.view.frame.size.width/4, 100)];
         func.layer.borderWidth = 0.5;
         func.layer.borderColor = [UIColor whiteColor].CGColor;
         func.backgroundColor = [UIColor clearColor];
         [self.view addSubview:func];
-        UIButton *open = [[UIButton alloc]initWithFrame:CGRectMake(26, 20, 40, 40)];
+        UIButton *open = [[UIButton alloc]initWithFrame:CGRectMake(26,20, 40, 40)];
         open.tag  = 1000+i;
         [open addTarget:self action:@selector(BtnFunction:) forControlEvents:UIControlEventTouchUpInside];
         [open setImage:[UIImage imageNamed:btnimg[i]] forState:0];
         [func addSubview:open];
+        
+        UILabel *title = [[UILabel alloc]initWithFrame:CGRectMake(0, 65,func.frame.size.width, 30)];
+        title.text = btnimg[i];
+        title.textAlignment = NSTextAlignmentCenter;
+        title.textColor = [UIColor whiteColor];
+        if (i == 3) {
+            title.text = @"设置";
+        }
+        [func addSubview:title];
     }
     
-    UIImageView *heat = [[UIImageView alloc]initWithFrame:CGRectMake(30, self.view.frame.size.height  - 140, 30, 30)];
+    UIImageView *heat = [[UIImageView alloc]initWithFrame:CGRectMake(30, self.view.frame.size.height  - 160, 30, 30)];
     heat.image = [UIImage imageNamed:@"加热"];
     [self.vi addSubview:heat];
     
-    UIImageView *manul = [[UIImageView alloc]initWithFrame:CGRectMake(80, self.view.frame.size.height - 140, 30, 30)];
-    manul.image = [UIImage imageNamed:@"操作_手动"];
+    UIImageView *manul = [[UIImageView alloc]initWithFrame:CGRectMake(80, self.view.frame.size.height -160, 30, 30)];
+    manul.image = [UIImage imageNamed:@"手动"];
     [self.vi addSubview:manul];
     
-    UIImageView *run = [[UIImageView alloc]initWithFrame:CGRectMake(130, self.view.frame.size.height - 140, 30, 30)];
+    UIImageView *run = [[UIImageView alloc]initWithFrame:CGRectMake(130, self.view.frame.size.height - 160, 30, 30)];
     run.image = [UIImage imageNamed:@"风量4"];
     run.tag = 100002;
     [self.vi addSubview:run];
@@ -184,7 +194,7 @@ int flag = 0;
     
 
     
-    UIButton *open = [[UIButton alloc]initWithFrame:CGRectMake(180, self.view.frame.size.height - 140, 120, 40)];
+    UIButton *open = [[UIButton alloc]initWithFrame:CGRectMake(180, self.view.frame.size.height - 160, 120, 40)];
     [open setTitle:@"强制开启" forState:0];
     open.layer.cornerRadius = 10;
     [open addTarget:self action:@selector(ChangeValueFlag:) forControlEvents:UIControlEventTouchUpInside];
@@ -208,12 +218,12 @@ int flag = 0;
         SettingViewController *se = [[SettingViewController alloc]init];
         [self presentViewController:se animated:YES completion:nil];
     }else if(sender.tag == 1000){
-        UIAlertController *aler = [UIAlertController alertControllerWithTitle:@"是否强制关机" message:@"将强制关闭整个系统" preferredStyle:1];
-        UIAlertAction *action = [UIAlertAction actionWithTitle:@"不关闭!" style:0 handler:nil];;
-        UIAlertAction *action1 = [UIAlertAction actionWithTitle:@"关闭" style:0 handler:nil];
-        [aler addAction:action];
-        [aler addAction:action1];
-        [self presentViewController:aler animated:YES completion:nil];
+        
+        ConfigViewController *con = [[ConfigViewController alloc]init];
+        con.view.frame = self.view.frame;
+        [self addChildViewController:con];
+        [self.view addSubview:con.view];
+        [con.view didMoveToWindow];
     }
 
 }

@@ -10,6 +10,8 @@
 #import <Chameleon.h>
 #import "ShikiSetpter.h"
 #import "BEMCheckBox.h"
+#import "AutoViewController.h"
+#import "ViewController.h"
 #define ScrHeight [UIScreen mainScreen].bounds.size.height
 #define ScrWidth  [UIScreen mainScreen].bounds.size.width
 
@@ -214,6 +216,30 @@
     }
     
 }
+
+
+-(void)BtnFunction:(UIButton *)sender{
+    if (sender.tag == 1002
+        ) {
+        AutoViewController *tp = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]]instantiateViewControllerWithIdentifier:@"auto"];
+        [self presentViewController:tp animated:YES completion:nil];
+    }else if (sender.tag == 1001){
+        ViewController *vc = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"vcx"];
+        [self presentViewController:vc animated:YES completion:nil];
+    }else if (sender.tag == 1003){
+        SettingViewController *se = [[SettingViewController alloc]init];
+        [self presentViewController:se animated:YES completion:nil];
+    }else if(sender.tag == 1000){
+        UIAlertController *aler = [UIAlertController alertControllerWithTitle:@"是否强制关机" message:@"将强制关闭整个系统" preferredStyle:1];
+        UIAlertAction *action = [UIAlertAction actionWithTitle:@"不关闭!" style:0 handler:nil];;
+        UIAlertAction *action1 = [UIAlertAction actionWithTitle:@"关闭" style:0 handler:nil];
+        [aler addAction:action];
+        [aler addAction:action1];
+        [self presentViewController:aler animated:YES completion:nil];
+    }
+    
+}
+
 
 -(void)DidCheckValue{
     

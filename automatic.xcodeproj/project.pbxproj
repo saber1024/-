@@ -8,6 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		1A7E4A289E102748C5D13775 /* libPods-automatic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A43F7019BF4B247DDF5CF13 /* libPods-automatic.a */; };
+		B802D3351F13508400C04188 /* ConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B802D3341F13508400C04188 /* ConfigViewController.m */; };
+		B802D33C1F13554700C04188 /* GaiDropDownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = B802D33B1F13554700C04188 /* GaiDropDownMenu.m */; };
+		B802D3491F1355A000C04188 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = B802D33E1F1355A000C04188 /* arrow.png */; };
+		B802D34A1F1355A000C04188 /* CCDropDownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = B802D3401F1355A000C04188 /* CCDropDownMenu.m */; };
+		B802D34B1F1355A000C04188 /* CCDropDownMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B802D3421F1355A000C04188 /* CCDropDownMenuCell.m */; };
+		B802D34C1F1355A000C04188 /* ManaDropDownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = B802D3451F1355A000C04188 /* ManaDropDownMenu.m */; };
+		B802D34D1F1355A000C04188 /* SyuDropDownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = B802D3481F1355A000C04188 /* SyuDropDownMenu.m */; };
+		B802D34F1F135EE600C04188 /* 开机.png in Resources */ = {isa = PBXBuildFile; fileRef = B802D34E1F135EE600C04188 /* 开机.png */; };
+		B802D3511F135EED00C04188 /* 开机 (1).png in Resources */ = {isa = PBXBuildFile; fileRef = B802D3501F135EED00C04188 /* 开机 (1).png */; };
+		B802D3531F1367A200C04188 /* 关闭.png in Resources */ = {isa = PBXBuildFile; fileRef = B802D3521F1367A200C04188 /* 关闭.png */; };
 		B8069DCB1F0DD2CC00AA0D27 /* AutoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8069DCA1F0DD2CC00AA0D27 /* AutoViewController.m */; };
 		B8069DCD1F0DDAB300AA0D27 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = B8069DCC1F0DDAB300AA0D27 /* menu.png */; };
 		B8069DCF1F0DDF9F00AA0D27 /* pink.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B8069DCE1F0DDF9F00AA0D27 /* pink.jpg */; };
@@ -59,7 +69,7 @@
 		B885A13A1F022FBE008869B4 /* 风车.png in Resources */ = {isa = PBXBuildFile; fileRef = B885A12A1F022FBE008869B4 /* 风车.png */; };
 		B885A13B1F022FBE008869B4 /* 时钟.png in Resources */ = {isa = PBXBuildFile; fileRef = B885A12B1F022FBE008869B4 /* 时钟.png */; };
 		B885A13C1F022FBE008869B4 /* 加热.png in Resources */ = {isa = PBXBuildFile; fileRef = B885A12C1F022FBE008869B4 /* 加热.png */; };
-		B885A13D1F022FBE008869B4 /* 操作_手动.png in Resources */ = {isa = PBXBuildFile; fileRef = B885A12D1F022FBE008869B4 /* 操作_手动.png */; };
+		B885A13D1F022FBE008869B4 /* 手动.png in Resources */ = {isa = PBXBuildFile; fileRef = B885A12D1F022FBE008869B4 /* 手动.png */; };
 		B885A13E1F022FBE008869B4 /* 左 (2).png in Resources */ = {isa = PBXBuildFile; fileRef = B885A12E1F022FBE008869B4 /* 左 (2).png */; };
 		B885A13F1F022FBE008869B4 /* 左 (1).png in Resources */ = {isa = PBXBuildFile; fileRef = B885A12F1F022FBE008869B4 /* 左 (1).png */; };
 		B885A1401F022FBE008869B4 /* 进入.png in Resources */ = {isa = PBXBuildFile; fileRef = B885A1301F022FBE008869B4 /* 进入.png */; };
@@ -103,6 +113,24 @@
 /* Begin PBXFileReference section */
 		36DD476838B6F8D7348D794E /* Pods-automatic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-automatic.debug.xcconfig"; path = "Pods/Target Support Files/Pods-automatic/Pods-automatic.debug.xcconfig"; sourceTree = "<group>"; };
 		9A43F7019BF4B247DDF5CF13 /* libPods-automatic.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-automatic.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B802D3331F13508400C04188 /* ConfigViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigViewController.h; sourceTree = "<group>"; };
+		B802D3341F13508400C04188 /* ConfigViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigViewController.m; sourceTree = "<group>"; };
+		B802D33A1F13554700C04188 /* GaiDropDownMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GaiDropDownMenu.h; sourceTree = "<group>"; };
+		B802D33B1F13554700C04188 /* GaiDropDownMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GaiDropDownMenu.m; sourceTree = "<group>"; };
+		B802D33E1F1355A000C04188 /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
+		B802D33F1F1355A000C04188 /* CCDropDownMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCDropDownMenu.h; sourceTree = "<group>"; };
+		B802D3401F1355A000C04188 /* CCDropDownMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCDropDownMenu.m; sourceTree = "<group>"; };
+		B802D3411F1355A000C04188 /* CCDropDownMenuCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCDropDownMenuCell.h; sourceTree = "<group>"; };
+		B802D3421F1355A000C04188 /* CCDropDownMenuCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCDropDownMenuCell.m; sourceTree = "<group>"; };
+		B802D3431F1355A000C04188 /* CCDropDownMenus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCDropDownMenus.h; sourceTree = "<group>"; };
+		B802D3441F1355A000C04188 /* ManaDropDownMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManaDropDownMenu.h; sourceTree = "<group>"; };
+		B802D3451F1355A000C04188 /* ManaDropDownMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManaDropDownMenu.m; sourceTree = "<group>"; };
+		B802D3461F1355A000C04188 /* Rect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rect.h; sourceTree = "<group>"; };
+		B802D3471F1355A000C04188 /* SyuDropDownMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SyuDropDownMenu.h; sourceTree = "<group>"; };
+		B802D3481F1355A000C04188 /* SyuDropDownMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SyuDropDownMenu.m; sourceTree = "<group>"; };
+		B802D34E1F135EE600C04188 /* 开机.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "开机.png"; sourceTree = "<group>"; };
+		B802D3501F135EED00C04188 /* 开机 (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "开机 (1).png"; sourceTree = "<group>"; };
+		B802D3521F1367A200C04188 /* 关闭.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "关闭.png"; sourceTree = "<group>"; };
 		B8069DCA1F0DD2CC00AA0D27 /* AutoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoViewController.m; sourceTree = "<group>"; };
 		B8069DCC1F0DDAB300AA0D27 /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
 		B8069DCE1F0DDF9F00AA0D27 /* pink.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pink.jpg; sourceTree = "<group>"; };
@@ -172,7 +200,7 @@
 		B885A12A1F022FBE008869B4 /* 风车.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "风车.png"; sourceTree = "<group>"; };
 		B885A12B1F022FBE008869B4 /* 时钟.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "时钟.png"; sourceTree = "<group>"; };
 		B885A12C1F022FBE008869B4 /* 加热.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "加热.png"; sourceTree = "<group>"; };
-		B885A12D1F022FBE008869B4 /* 操作_手动.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "操作_手动.png"; sourceTree = "<group>"; };
+		B885A12D1F022FBE008869B4 /* 手动.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "手动.png"; sourceTree = "<group>"; };
 		B885A12E1F022FBE008869B4 /* 左 (2).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "左 (2).png"; sourceTree = "<group>"; };
 		B885A12F1F022FBE008869B4 /* 左 (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "左 (1).png"; sourceTree = "<group>"; };
 		B885A1301F022FBE008869B4 /* 进入.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "进入.png"; sourceTree = "<group>"; };
@@ -242,6 +270,24 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		B802D33D1F1355A000C04188 /* CCDropDownMenu */ = {
+			isa = PBXGroup;
+			children = (
+				B802D33E1F1355A000C04188 /* arrow.png */,
+				B802D33F1F1355A000C04188 /* CCDropDownMenu.h */,
+				B802D3401F1355A000C04188 /* CCDropDownMenu.m */,
+				B802D3411F1355A000C04188 /* CCDropDownMenuCell.h */,
+				B802D3421F1355A000C04188 /* CCDropDownMenuCell.m */,
+				B802D3431F1355A000C04188 /* CCDropDownMenus.h */,
+				B802D3441F1355A000C04188 /* ManaDropDownMenu.h */,
+				B802D3451F1355A000C04188 /* ManaDropDownMenu.m */,
+				B802D3461F1355A000C04188 /* Rect.h */,
+				B802D3471F1355A000C04188 /* SyuDropDownMenu.h */,
+				B802D3481F1355A000C04188 /* SyuDropDownMenu.m */,
+			);
+			path = CCDropDownMenu;
+			sourceTree = "<group>";
+		};
 		B8069DE61F0E36C900AA0D27 /* utility */ = {
 			isa = PBXGroup;
 			children = (
@@ -297,6 +343,9 @@
 		B885A0B71F022F3B008869B4 /* automatic */ = {
 			isa = PBXGroup;
 			children = (
+				B802D33D1F1355A000C04188 /* CCDropDownMenu */,
+				B802D33A1F13554700C04188 /* GaiDropDownMenu.h */,
+				B802D33B1F13554700C04188 /* GaiDropDownMenu.m */,
 				B84C0ACA1F0F2677009C0D92 /* Classes */,
 				B8069DE61F0E36C900AA0D27 /* utility */,
 				B885A1531F024D10008869B4 /* XHDatePicker */,
@@ -335,6 +384,8 @@
 				B8069DE41F0E33DB00AA0D27 /* SettingViewController.m */,
 				B86D27631F0F6591009333F3 /* ModelViewController.h */,
 				B86D27641F0F6591009333F3 /* ModelViewController.m */,
+				B802D3331F13508400C04188 /* ConfigViewController.h */,
+				B802D3341F13508400C04188 /* ConfigViewController.m */,
 			);
 			path = automatic;
 			sourceTree = "<group>";
@@ -368,6 +419,9 @@
 		B885A1211F022FB4008869B4 /* image */ = {
 			isa = PBXGroup;
 			children = (
+				B802D3521F1367A200C04188 /* 关闭.png */,
+				B802D3501F135EED00C04188 /* 开机 (1).png */,
+				B802D34E1F135EE600C04188 /* 开机.png */,
 				B84C0AC61F0F2410009C0D92 /* 椭圆 1.png */,
 				B84C0AC71F0F2410009C0D92 /* 椭圆.png */,
 				B8069DE11F0E1FCC00AA0D27 /* 左 (3).png */,
@@ -396,7 +450,7 @@
 				B885A12A1F022FBE008869B4 /* 风车.png */,
 				B885A12B1F022FBE008869B4 /* 时钟.png */,
 				B885A12C1F022FBE008869B4 /* 加热.png */,
-				B885A12D1F022FBE008869B4 /* 操作_手动.png */,
+				B885A12D1F022FBE008869B4 /* 手动.png */,
 				B885A12E1F022FBE008869B4 /* 左 (2).png */,
 				B885A12F1F022FBE008869B4 /* 左 (1).png */,
 				B885A1301F022FBE008869B4 /* 进入.png */,
@@ -575,6 +629,7 @@
 				B885A1341F022FBE008869B4 /* back3.png in Resources */,
 				B8069DCF1F0DDF9F00AA0D27 /* pink.jpg in Resources */,
 				B84C0AC91F0F2410009C0D92 /* 椭圆.png in Resources */,
+				B802D34F1F135EE600C04188 /* 开机.png in Resources */,
 				B885A13E1F022FBE008869B4 /* 左 (2).png in Resources */,
 				B8069DDC1F0E145100AA0D27 /* 月亮.png in Resources */,
 				B885A1411F022FBE008869B4 /* 开关.png in Resources */,
@@ -582,11 +637,13 @@
 				B885A1521F024536008869B4 /* ba.jpeg in Resources */,
 				B885A0C81F022F3B008869B4 /* LaunchScreen.storyboard in Resources */,
 				B823541A1F06514B00A9EC00 /* back.png in Resources */,
+				B802D3511F135EED00C04188 /* 开机 (1).png in Resources */,
 				B8069DD81F0E104600AA0D27 /* 星.png in Resources */,
 				B885A1391F022FBE008869B4 /* 日历.png in Resources */,
 				B885A14D1F023BF0008869B4 /* morning.png in Resources */,
 				B885A13F1F022FBE008869B4 /* 左 (1).png in Resources */,
 				B8DB31321F0CBA5B0063B5D3 /* 向上 (1).png in Resources */,
+				B802D3531F1367A200C04188 /* 关闭.png in Resources */,
 				B885A1361F022FBE008869B4 /* back5.png in Resources */,
 				B885A1371F022FBE008869B4 /* 帮助.png in Resources */,
 				B894644C1F0B8725008180D4 /* 风量4.png in Resources */,
@@ -596,11 +653,12 @@
 				B8069DCD1F0DDAB300AA0D27 /* menu.png in Resources */,
 				B885A1351F022FBE008869B4 /* back4.png in Resources */,
 				B84C0AC81F0F2410009C0D92 /* 椭圆 1.png in Resources */,
-				B885A13D1F022FBE008869B4 /* 操作_手动.png in Resources */,
+				B885A13D1F022FBE008869B4 /* 手动.png in Resources */,
 				B885A0C51F022F3B008869B4 /* Assets.xcassets in Resources */,
 				B885A1321F022FBE008869B4 /* back1.png in Resources */,
 				B885A0C31F022F3B008869B4 /* Main.storyboard in Resources */,
 				B885A1331F022FBE008869B4 /* back2.png in Resources */,
+				B802D3491F1355A000C04188 /* arrow.png in Resources */,
 				B8069DDE1F0E1D1E00AA0D27 /* 自动.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -677,6 +735,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B82353FF1F064E3500A9EC00 /* WaveProgressView.swift in Sources */,
+				B802D34A1F1355A000C04188 /* CCDropDownMenu.m in Sources */,
 				B84C0AD61F0F2677009C0D92 /* BEMPathManager.m in Sources */,
 				B885A1501F02406C008869B4 /* DateConfigViewController.m in Sources */,
 				B8069DE51F0E33DB00AA0D27 /* SettingViewController.m in Sources */,
@@ -688,6 +747,7 @@
 				B82354121F064FB900A9EC00 /* tempViewController.m in Sources */,
 				B84C0AD51F0F2677009C0D92 /* BEMCheckBoxGroup.m in Sources */,
 				B86D27651F0F6591009333F3 /* ModelViewController.m in Sources */,
+				B802D33C1F13554700C04188 /* GaiDropDownMenu.m in Sources */,
 				B885A15D1F024D10008869B4 /* NSDate+Extension.m in Sources */,
 				B885A15E1F024D10008869B4 /* UIView+Extension.m in Sources */,
 				B8069DE91F0E36E000AA0D27 /* ShikiSetpter.m in Sources */,
@@ -698,7 +758,11 @@
 				B82354051F064E3D00A9EC00 /* tempView.m in Sources */,
 				B8069DCB1F0DD2CC00AA0D27 /* AutoViewController.m in Sources */,
 				B885A0BA1F022F3B008869B4 /* main.m in Sources */,
+				B802D34C1F1355A000C04188 /* ManaDropDownMenu.m in Sources */,
+				B802D3351F13508400C04188 /* ConfigViewController.m in Sources */,
 				B84C0AD41F0F2677009C0D92 /* BEMCheckBox.m in Sources */,
+				B802D34D1F1355A000C04188 /* SyuDropDownMenu.m in Sources */,
+				B802D34B1F1355A000C04188 /* CCDropDownMenuCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
