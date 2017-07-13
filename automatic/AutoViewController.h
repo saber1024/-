@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface AutoViewController : UIViewController
-
+@property(nonatomic,strong)NSString *weekend;
 @end

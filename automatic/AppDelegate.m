@@ -7,10 +7,11 @@
 //
 
 #import "AppDelegate.h"
-#import "CalendarViewController.h"
 #import "ModelViewController.h"
 #import "AutoViewController.h"
 #import "tempViewController.h"
+#import "DataBaseModel.h"
+#import "FMDataManager.h"
 @interface AppDelegate ()
 
 @end
@@ -20,6 +21,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
+    FMDataManager *manager = [FMDataManager SharedDB];
+    bool flag = [manager CreateDBWithName:@"shiki"];
+    [manager createSettingDB];
+    NSLog(@"%d",flag);
+    
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor clearColor];
 
@@ -32,8 +38,7 @@
     
     NSFileManager *fileManager = [NSFileManager defaultManager];
     if ([fileManager fileExistsAtPath:filePath]) {
-        CalendarViewController *ca = [[CalendarViewController alloc]init];
-        self.window.rootViewController = ca;
+       
 
     }
     

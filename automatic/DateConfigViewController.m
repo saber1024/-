@@ -123,16 +123,16 @@ IB_DESIGNABLE
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)pickerTime:(id)sender {
-    XHDatePickerView *datepicker = [[XHDatePickerView alloc] initWithCurrentDate:[NSDate date:@"2020-1-15 11:11" WithFormat:@"HH:mm"] CompleteBlock:^(NSDate *startDate, NSDate *endDate) {
+    XHDatePickerView *datepicker = [[XHDatePickerView alloc] initWithCurrentDate:[NSDate date:@"11:11" WithFormat:@"HH:mm"] CompleteBlock:^(NSDate *startDate, NSDate *endDate) {
         self.startime.text = [startDate stringWithFormat:@"HH:mm"];
         self.endtime.text = [endDate stringWithFormat:@"HH:mm"];
     }];
     
     
-    datepicker.datePickerStyle = DateStyleShowYearMonthDayHourMinute;
+    datepicker.datePickerStyle = DateStyleShowHourMinute;
     datepicker.dateType = DateTypeStartDate;
-    datepicker.minLimitDate = [NSDate date:@"2017-2-28 0:00" WithFormat:@"yyyy-MM-dd HH:mm"];
-    datepicker.maxLimitDate = [NSDate date:@"2018-2-28 24:00" WithFormat:@"yyyy-MM-dd HH:mm"];
+    datepicker.minLimitDate = [NSDate date:@"0:00" WithFormat:@"HH:mm"];
+    datepicker.maxLimitDate = [NSDate date:@"24:00" WithFormat:@"HH:mm"];
     [datepicker show];
 }
 

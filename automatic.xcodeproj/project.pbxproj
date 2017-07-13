@@ -43,6 +43,10 @@
 		B823541A1F06514B00A9EC00 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = B82354191F06514B00A9EC00 /* back.png */; };
 		B823541B1F06514B00A9EC00 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = B82354191F06514B00A9EC00 /* back.png */; };
 		B823541C1F06514B00A9EC00 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = B82354191F06514B00A9EC00 /* back.png */; };
+		B824E5461F1625D80084F8F3 /* DateModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B824E5451F1625D80084F8F3 /* DateModel.m */; };
+		B824E5491F1625FB0084F8F3 /* DateCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = B824E5481F1625FB0084F8F3 /* DateCollection.m */; };
+		B824E54C1F1626A40084F8F3 /* DataBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B824E54B1F1626A40084F8F3 /* DataBaseModel.m */; };
+		B824E54E1F1627360084F8F3 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B824E54D1F1627360084F8F3 /* libsqlite3.tbd */; };
 		B84C0AC81F0F2410009C0D92 /* 椭圆 1.png in Resources */ = {isa = PBXBuildFile; fileRef = B84C0AC61F0F2410009C0D92 /* 椭圆 1.png */; };
 		B84C0AC91F0F2410009C0D92 /* 椭圆.png in Resources */ = {isa = PBXBuildFile; fileRef = B84C0AC71F0F2410009C0D92 /* 椭圆.png */; };
 		B84C0AD31F0F2677009C0D92 /* BEMAnimationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B84C0ACC1F0F2677009C0D92 /* BEMAnimationManager.m */; };
@@ -50,6 +54,10 @@
 		B84C0AD51F0F2677009C0D92 /* BEMCheckBoxGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = B84C0AD01F0F2677009C0D92 /* BEMCheckBoxGroup.m */; };
 		B84C0AD61F0F2677009C0D92 /* BEMPathManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B84C0AD21F0F2677009C0D92 /* BEMPathManager.m */; };
 		B86D27651F0F6591009333F3 /* ModelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B86D27641F0F6591009333F3 /* ModelViewController.m */; };
+		B86DE3B41F170AF100937787 /* FMDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B86DE3B31F170AF100937787 /* FMDataManager.m */; };
+		B86DE3B61F1747CF00937787 /* Weather_SunAbstract.png in Resources */ = {isa = PBXBuildFile; fileRef = B86DE3B51F1747CF00937787 /* Weather_SunAbstract.png */; };
+		B86DE3B81F175F6F00937787 /* sun.png in Resources */ = {isa = PBXBuildFile; fileRef = B86DE3B71F175F6F00937787 /* sun.png */; };
+		B86DE3BB1F17612400937787 /* SettingDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B86DE3BA1F17612400937787 /* SettingDataModel.m */; };
 		B885A0BA1F022F3B008869B4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B885A0B91F022F3B008869B4 /* main.m */; };
 		B885A0BD1F022F3B008869B4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B885A0BC1F022F3B008869B4 /* AppDelegate.m */; };
 		B885A0C01F022F3B008869B4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B885A0BF1F022F3B008869B4 /* ViewController.m */; };
@@ -84,13 +92,13 @@
 		B885A15E1F024D10008869B4 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = B885A1581F024D10008869B4 /* UIView+Extension.m */; };
 		B885A15F1F024D10008869B4 /* XHDatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = B885A15B1F024D10008869B4 /* XHDatePickerView.m */; };
 		B885A1601F024D10008869B4 /* XHDatePickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B885A15C1F024D10008869B4 /* XHDatePickerView.xib */; };
-		B885A1631F025FE3008869B4 /* CalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B885A1621F025FE3008869B4 /* CalendarViewController.m */; };
 		B894644C1F0B8725008180D4 /* 风量4.png in Resources */ = {isa = PBXBuildFile; fileRef = B894644B1F0B8725008180D4 /* 风量4.png */; };
 		B8DB31321F0CBA5B0063B5D3 /* 向上 (1).png in Resources */ = {isa = PBXBuildFile; fileRef = B8DB31311F0CBA5B0063B5D3 /* 向上 (1).png */; };
 		B8DB31341F0CBA5F0063B5D3 /* 向下.png in Resources */ = {isa = PBXBuildFile; fileRef = B8DB31331F0CBA5F0063B5D3 /* 向下.png */; };
 		B8DB31361F0CBC1A0063B5D3 /* 向上32px.png in Resources */ = {isa = PBXBuildFile; fileRef = B8DB31351F0CBC1A0063B5D3 /* 向上32px.png */; };
 		B8DB31381F0CBC560063B5D3 /* 向下32px.png in Resources */ = {isa = PBXBuildFile; fileRef = B8DB31371F0CBC560063B5D3 /* 向下32px.png */; };
 		B8DB31401F0CD8C30063B5D3 /* AutoView.m in Sources */ = {isa = PBXBuildFile; fileRef = B8DB313F1F0CD8C30063B5D3 /* AutoView.m */; };
+		B8FD2A281F161A6B00571D7A /* AutoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B8FD2A271F161A6B00571D7A /* AutoTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -161,6 +169,13 @@
 		B82354151F0650F100A9EC00 /* libChameleonFramework.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libChameleonFramework.a; path = "../../Library/Developer/Xcode/DerivedData/automatic-edxgrmszhfjvjcanxrgmewisngzu/Build/Products/Debug-iphoneos/ChameleonFramework/libChameleonFramework.a"; sourceTree = "<group>"; };
 		B82354171F0650F500A9EC00 /* libFSCalendar.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libFSCalendar.a; path = "../../Library/Developer/Xcode/DerivedData/automatic-edxgrmszhfjvjcanxrgmewisngzu/Build/Products/Debug-iphoneos/FSCalendar/libFSCalendar.a"; sourceTree = "<group>"; };
 		B82354191F06514B00A9EC00 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
+		B824E5441F1625D80084F8F3 /* DateModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateModel.h; sourceTree = "<group>"; };
+		B824E5451F1625D80084F8F3 /* DateModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateModel.m; sourceTree = "<group>"; };
+		B824E5471F1625FB0084F8F3 /* DateCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateCollection.h; sourceTree = "<group>"; };
+		B824E5481F1625FB0084F8F3 /* DateCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateCollection.m; sourceTree = "<group>"; };
+		B824E54A1F1626A40084F8F3 /* DataBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataBaseModel.h; sourceTree = "<group>"; };
+		B824E54B1F1626A40084F8F3 /* DataBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataBaseModel.m; sourceTree = "<group>"; };
+		B824E54D1F1627360084F8F3 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		B84C0AC61F0F2410009C0D92 /* 椭圆 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "椭圆 1.png"; sourceTree = "<group>"; };
 		B84C0AC71F0F2410009C0D92 /* 椭圆.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "椭圆.png"; sourceTree = "<group>"; };
 		B84C0ACB1F0F2677009C0D92 /* BEMAnimationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEMAnimationManager.h; sourceTree = "<group>"; };
@@ -173,6 +188,12 @@
 		B84C0AD21F0F2677009C0D92 /* BEMPathManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BEMPathManager.m; sourceTree = "<group>"; };
 		B86D27631F0F6591009333F3 /* ModelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelViewController.h; sourceTree = "<group>"; };
 		B86D27641F0F6591009333F3 /* ModelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelViewController.m; sourceTree = "<group>"; };
+		B86DE3B21F170AF100937787 /* FMDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDataManager.h; sourceTree = "<group>"; };
+		B86DE3B31F170AF100937787 /* FMDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDataManager.m; sourceTree = "<group>"; };
+		B86DE3B51F1747CF00937787 /* Weather_SunAbstract.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Weather_SunAbstract.png; sourceTree = "<group>"; };
+		B86DE3B71F175F6F00937787 /* sun.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sun.png; sourceTree = "<group>"; };
+		B86DE3B91F17612400937787 /* SettingDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingDataModel.h; sourceTree = "<group>"; };
+		B86DE3BA1F17612400937787 /* SettingDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingDataModel.m; sourceTree = "<group>"; };
 		B885A0B51F022F3B008869B4 /* automatic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = automatic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B885A0B91F022F3B008869B4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B885A0BB1F022F3B008869B4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -220,8 +241,6 @@
 		B885A15A1F024D10008869B4 /* XHDatePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHDatePickerView.h; sourceTree = "<group>"; };
 		B885A15B1F024D10008869B4 /* XHDatePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHDatePickerView.m; sourceTree = "<group>"; };
 		B885A15C1F024D10008869B4 /* XHDatePickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XHDatePickerView.xib; sourceTree = "<group>"; };
-		B885A1611F025FE3008869B4 /* CalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarViewController.h; sourceTree = "<group>"; };
-		B885A1621F025FE3008869B4 /* CalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarViewController.m; sourceTree = "<group>"; };
 		B894644B1F0B8725008180D4 /* 风量4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "风量4.png"; path = "automatic/风量4.png"; sourceTree = "<group>"; };
 		B8DB31311F0CBA5B0063B5D3 /* 向上 (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "向上 (1).png"; sourceTree = "<group>"; };
 		B8DB31331F0CBA5F0063B5D3 /* 向下.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "向下.png"; sourceTree = "<group>"; };
@@ -230,6 +249,8 @@
 		B8DB31391F0CD5BF0063B5D3 /* AutoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoViewController.h; sourceTree = "<group>"; };
 		B8DB313E1F0CD8C30063B5D3 /* AutoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoView.h; sourceTree = "<group>"; };
 		B8DB313F1F0CD8C30063B5D3 /* AutoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoView.m; sourceTree = "<group>"; };
+		B8FD2A261F161A6B00571D7A /* AutoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoTableViewCell.h; sourceTree = "<group>"; };
+		B8FD2A271F161A6B00571D7A /* AutoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoTableViewCell.m; sourceTree = "<group>"; };
 		BBAB3DEB38E22CCA449E0731 /* Pods-automatic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-automatic.release.xcconfig"; path = "Pods/Target Support Files/Pods-automatic/Pods-automatic.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -238,6 +259,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B824E54E1F1627360084F8F3 /* libsqlite3.tbd in Frameworks */,
 				B82354181F0650F500A9EC00 /* libFSCalendar.a in Frameworks */,
 				B82354161F0650F100A9EC00 /* libChameleonFramework.a in Frameworks */,
 				1A7E4A289E102748C5D13775 /* libPods-automatic.a in Frameworks */,
@@ -367,8 +389,6 @@
 				B885A1491F0236D2008869B4 /* ListTableViewCell.xib */,
 				B885A14E1F02406C008869B4 /* DateConfigViewController.h */,
 				B885A14F1F02406C008869B4 /* DateConfigViewController.m */,
-				B885A1611F025FE3008869B4 /* CalendarViewController.h */,
-				B885A1621F025FE3008869B4 /* CalendarViewController.m */,
 				B82353FE1F064E3500A9EC00 /* WaveProgressView.swift */,
 				B82354001F064E3D00A9EC00 /* Display.h */,
 				B82354011F064E3D00A9EC00 /* Display.m */,
@@ -386,6 +406,18 @@
 				B86D27641F0F6591009333F3 /* ModelViewController.m */,
 				B802D3331F13508400C04188 /* ConfigViewController.h */,
 				B802D3341F13508400C04188 /* ConfigViewController.m */,
+				B8FD2A261F161A6B00571D7A /* AutoTableViewCell.h */,
+				B8FD2A271F161A6B00571D7A /* AutoTableViewCell.m */,
+				B824E5441F1625D80084F8F3 /* DateModel.h */,
+				B824E5451F1625D80084F8F3 /* DateModel.m */,
+				B824E5471F1625FB0084F8F3 /* DateCollection.h */,
+				B824E5481F1625FB0084F8F3 /* DateCollection.m */,
+				B824E54A1F1626A40084F8F3 /* DataBaseModel.h */,
+				B824E54B1F1626A40084F8F3 /* DataBaseModel.m */,
+				B86DE3B21F170AF100937787 /* FMDataManager.h */,
+				B86DE3B31F170AF100937787 /* FMDataManager.m */,
+				B86DE3B91F17612400937787 /* SettingDataModel.h */,
+				B86DE3BA1F17612400937787 /* SettingDataModel.m */,
 			);
 			path = automatic;
 			sourceTree = "<group>";
@@ -419,6 +451,8 @@
 		B885A1211F022FB4008869B4 /* image */ = {
 			isa = PBXGroup;
 			children = (
+				B86DE3B71F175F6F00937787 /* sun.png */,
+				B86DE3B51F1747CF00937787 /* Weather_SunAbstract.png */,
 				B802D3521F1367A200C04188 /* 关闭.png */,
 				B802D3501F135EED00C04188 /* 开机 (1).png */,
 				B802D34E1F135EE600C04188 /* 开机.png */,
@@ -492,6 +526,7 @@
 		EED2A5598EFB6E3135B9F716 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B824E54D1F1627360084F8F3 /* libsqlite3.tbd */,
 				B82354171F0650F500A9EC00 /* libFSCalendar.a */,
 				B82354151F0650F100A9EC00 /* libChameleonFramework.a */,
 				9A43F7019BF4B247DDF5CF13 /* libPods-automatic.a */,
@@ -614,6 +649,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B86DE3B81F175F6F00937787 /* sun.png in Resources */,
 				B8069DE01F0E1EEE00AA0D27 /* 打开.png in Resources */,
 				B8069DDA1F0E133900AA0D27 /* 星副本.png in Resources */,
 				B8069DD31F0DE1AA00AA0D27 /* ocean.png in Resources */,
@@ -657,6 +693,7 @@
 				B885A0C51F022F3B008869B4 /* Assets.xcassets in Resources */,
 				B885A1321F022FBE008869B4 /* back1.png in Resources */,
 				B885A0C31F022F3B008869B4 /* Main.storyboard in Resources */,
+				B86DE3B61F1747CF00937787 /* Weather_SunAbstract.png in Resources */,
 				B885A1331F022FBE008869B4 /* back2.png in Resources */,
 				B802D3491F1355A000C04188 /* arrow.png in Resources */,
 				B8069DDE1F0E1D1E00AA0D27 /* 自动.png in Resources */,
@@ -734,28 +771,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B824E5491F1625FB0084F8F3 /* DateCollection.m in Sources */,
 				B82353FF1F064E3500A9EC00 /* WaveProgressView.swift in Sources */,
 				B802D34A1F1355A000C04188 /* CCDropDownMenu.m in Sources */,
 				B84C0AD61F0F2677009C0D92 /* BEMPathManager.m in Sources */,
 				B885A1501F02406C008869B4 /* DateConfigViewController.m in Sources */,
 				B8069DE51F0E33DB00AA0D27 /* SettingViewController.m in Sources */,
 				B82354041F064E3D00A9EC00 /* Display.m in Sources */,
-				B885A1631F025FE3008869B4 /* CalendarViewController.m in Sources */,
 				B84C0AD31F0F2677009C0D92 /* BEMAnimationManager.m in Sources */,
 				B8069DD61F0DE81B00AA0D27 /* thermometer.m in Sources */,
 				B885A0C01F022F3B008869B4 /* ViewController.m in Sources */,
 				B82354121F064FB900A9EC00 /* tempViewController.m in Sources */,
 				B84C0AD51F0F2677009C0D92 /* BEMCheckBoxGroup.m in Sources */,
+				B824E5461F1625D80084F8F3 /* DateModel.m in Sources */,
 				B86D27651F0F6591009333F3 /* ModelViewController.m in Sources */,
 				B802D33C1F13554700C04188 /* GaiDropDownMenu.m in Sources */,
 				B885A15D1F024D10008869B4 /* NSDate+Extension.m in Sources */,
+				B824E54C1F1626A40084F8F3 /* DataBaseModel.m in Sources */,
 				B885A15E1F024D10008869B4 /* UIView+Extension.m in Sources */,
 				B8069DE91F0E36E000AA0D27 /* ShikiSetpter.m in Sources */,
 				B885A15F1F024D10008869B4 /* XHDatePickerView.m in Sources */,
 				B8DB31401F0CD8C30063B5D3 /* AutoView.m in Sources */,
 				B885A14A1F0236D2008869B4 /* ListTableViewCell.m in Sources */,
+				B86DE3BB1F17612400937787 /* SettingDataModel.m in Sources */,
 				B885A0BD1F022F3B008869B4 /* AppDelegate.m in Sources */,
 				B82354051F064E3D00A9EC00 /* tempView.m in Sources */,
+				B8FD2A281F161A6B00571D7A /* AutoTableViewCell.m in Sources */,
 				B8069DCB1F0DD2CC00AA0D27 /* AutoViewController.m in Sources */,
 				B885A0BA1F022F3B008869B4 /* main.m in Sources */,
 				B802D34C1F1355A000C04188 /* ManaDropDownMenu.m in Sources */,
@@ -763,6 +804,7 @@
 				B84C0AD41F0F2677009C0D92 /* BEMCheckBox.m in Sources */,
 				B802D34D1F1355A000C04188 /* SyuDropDownMenu.m in Sources */,
 				B802D34B1F1355A000C04188 /* CCDropDownMenuCell.m in Sources */,
+				B86DE3B41F170AF100937787 /* FMDataManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -927,6 +969,11 @@
 				INFOPLIST_FILE = automatic/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/FMDB",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/JQFMDB",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.shiki.test.automatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "automatic-Bridging-Header.h";
@@ -949,6 +996,11 @@
 				INFOPLIST_FILE = automatic/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/FMDB",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/JQFMDB",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.shiki.test.automatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "automatic-Bridging-Header.h";

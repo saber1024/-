@@ -127,23 +127,8 @@
                     <view key="view" contentMode="scaleToFill" id="8TJ-R6-Yk3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" restorationIdentifier="auto" translatesAutoresizingMaskIntoConstraints="NO" id="twL-VK-Isl" customClass="AutoView">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="twL-VK-Isl" secondAttribute="trailing" id="3dk-PW-7X3"/>
-                            <constraint firstItem="twL-VK-Isl" firstAttribute="leading" secondItem="8TJ-R6-Yk3" secondAttribute="leading" id="5TO-1m-CYg"/>
-                            <constraint firstItem="bYS-Ww-R16" firstAttribute="top" secondItem="twL-VK-Isl" secondAttribute="bottom" id="bMj-ml-scC"/>
-                            <constraint firstItem="twL-VK-Isl" firstAttribute="top" secondItem="8TJ-R6-Yk3" secondAttribute="top" id="kps-8R-7kb"/>
-                        </constraints>
                     </view>
-                    <connections>
-                        <outlet property="autoview" destination="twL-VK-Isl" id="aE8-lA-vAr"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iD5-4U-OT3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

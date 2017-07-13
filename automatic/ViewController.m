@@ -9,40 +9,86 @@
 #import "ViewController.h"
 #import "ListTableViewCell.h"
 #import "DateConfigViewController.h"
-#import "CalendarViewController.h"
 #import "automatic-Swift.h"
 #import "tempViewController.h"
 #import "AutoViewController.h"
 #import "SettingViewController.h"
 #import "ConfigViewController.h"
-@interface DateModle : NSObject
-@property(nonatomic,strong)NSString *tempture;
-@property(nonatomic,strong)NSString *startime;
-@property(nonatomic,strong)NSString *endtime;
-@end
-@implementation DateModle
-@end
-
+#import "DateModel.h"
+#import "DateCollection.h"
+#import "DataBaseModel.h"
+#import "FMDataManager.h"
+int date = 1;
 
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic,strong)UITableView *dateList;
 @property(nonatomic,strong)NSMutableArray *datenum;
+@property(nonatomic,strong) UILabel *weekend;
+@property(nonatomic,strong)FMDataManager *manger;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    self.datenum = [NSMutableArray array];
+    
+    
+    
+    
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"timg.jpeg"]];
     
     UIBlurEffect *blur = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
     UIVisualEffectView *vi = [[UIVisualEffectView alloc]initWithFrame:self.view.frame];
     vi.effect = blur;
     [self.view addSubview:vi];
+    
+    
     UIView *back = [[UIView alloc]initWithFrame:CGRectMake(0, self.view.frame.size.height - 100, self.view.frame.size.width, 0.5)];
     back.backgroundColor = [UIColor whiteColor];
     [vi addSubview:back];
+    
+    
+    _weekend  = [[UILabel alloc]initWithFrame:CGRectMake(self.view.center.x - 20, self.view.frame.size.height - 175, 120, 30)];
+    _weekend.text = @"周一";
+    _weekend.font = [UIFont systemFontOfSize:25];
+    _weekend.textColor = [UIColor whiteColor];
+    [vi addSubview:_weekend];
+    for (int i = 0; i<7; i++) {
+        DateCollection *mode = [[DateCollection alloc]init];
+        NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+        formatter.numberStyle = kCFNumberFormatterRoundHalfDown;
+        NSString *string = [formatter stringFromNumber:[NSNumber numberWithInt:i+1]];
+        
+        mode.date = [NSString stringWithFormat:@"周%@",string];
+        [self.datenum addObject:mode];
+    }
+
+    FMDataManager *manger= [FMDataManager SharedDB];
+    self.manger = manger;
+    NSMutableArray *result = [manger SearchAllDB];
+    NSLog(@"%@",result);
+    if (result.count == 0) {
+        NSLog(@"未能查找到数据!");
+    }else{
+        for (int i = 0; i<result.count; i++) {
+            DataBaseModel *mod = result[i];
+            NSString *s  = [mod.date substringWithRange:NSMakeRange(1, 1)];
+            NSString *s1 = [self arabicNumberalsFromChineseNumberals:s];
+            int weekend = [s1 intValue];
+            
+            DateCollection *mo = self.datenum[weekend];
+            DateModel *mode = [[DateModel alloc]init];
+            mode.startime = mod.startime;
+            mode.endtime = mod.endtime;
+            mode.tempture = mod.temperature;
+            [mo.modelcoll addObject:mode];
+            [self.dateList reloadData];
+            NSLog(@"数据集合 --- %@",mo.modelcoll);
+        }
+        
+        
+    }
     
     
     UIButton *add = [[UIButton alloc]initWithFrame:CGRectMake(self.view.frame.size.width - 55, 40, 30, 30)];
@@ -58,7 +104,6 @@
     
     [self.dateList registerNib:[UINib nibWithNibName:@"ListTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"list"];
     
-    self.datenum = [NSMutableArray array];
     NSArray *btnimg  = @[@"开关",@"时钟",@"手动",@"风车"];
     for (int i = 0; i<4; i++) {
         UIView *func = [[UIView alloc]initWithFrame:CGRectMake(i *(self.view.frame.size.width / 4), self.view.frame.size.height - 100, self.view.frame.size.width/4, 100)];
@@ -83,42 +128,82 @@
         
     }
     
-    UIButton *dateset = [[UIButton alloc]initWithFrame:CGRectMake(self.view.center.x - 80, self.view.frame.size.height - 170, 160, 50)];
-    [dateset setTitle:@"日期设置" forState:0];
-    dateset.titleLabel.textColor = [UIColor whiteColor];
-    dateset.backgroundColor = [UIColor clearColor];
-    dateset.layer.cornerRadius = 10;
-    dateset.layer.borderColor = [UIColor whiteColor].CGColor;
-    dateset.layer.borderWidth = 1;
-    [dateset addTarget:self action:@selector(Dataset) forControlEvents:UIControlEventTouchUpInside];
-    [vi addSubview:dateset];
+    UIImageView *img = [[UIImageView alloc]initWithFrame:CGRectMake(self.view.center.x -70, self.view.frame.size.height - 180, 35, 35)];
+    img.image = [UIImage imageNamed:@"日历"];
+    [vi addSubview:img];
     
+    
+    UISwipeGestureRecognizer *sipe = [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(SwipeTochangeDate:)];
+    [sipe setDirection:UISwipeGestureRecognizerDirectionRight];
+    [self.weekend addGestureRecognizer:sipe];
+    
+    UISwipeGestureRecognizer *sipe1 = [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(SwipeTochangeDate:)];
+    [sipe1 setDirection:UISwipeGestureRecognizerDirectionLeft];
+    [self.weekend addGestureRecognizer:sipe1];
+    self.weekend.userInteractionEnabled = YES;
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(ReloadDateNoti:) name:@"Date" object:nil];
     
 }
 
--(void)Dataset{
-    CalendarViewController *ca = [[CalendarViewController alloc]init];
+-(void)SwipeTochangeDate:(UISwipeGestureRecognizer *)gust{
     
-    [self presentViewController:ca animated:YES completion:nil];
+    if (gust.direction == UISwipeGestureRecognizerDirectionLeft) {
+        NSString *s  = [self.weekend.text substringWithRange:NSMakeRange(1, 1)];
+        NSString *s1 = [self arabicNumberalsFromChineseNumberals:s];
+        int weekend = [s1 intValue];
+        if (weekend > 1) {
+            weekend -= 1;
+            NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+            formatter.numberStyle = kCFNumberFormatterRoundHalfDown;
+            NSString *string = [formatter stringFromNumber:[NSNumber numberWithInt:weekend]];
+            self.weekend.text = [NSString stringWithFormat:@"周%@",string];
+            [self.dateList reloadData];
+        }
+          }
+    
+    else{
+        NSString *s  = [self.weekend.text substringWithRange:NSMakeRange(1, 1)];
+        NSString *s1 = [self arabicNumberalsFromChineseNumberals:s];
+        int weekend = [s1 intValue];
+        if (weekend <7) {
+            weekend += 1;
+            NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+            formatter.numberStyle = kCFNumberFormatterRoundHalfDown;
+            NSString *string = [formatter stringFromNumber:[NSNumber numberWithInt:weekend]];
+            NSLog(@"%@",string);
+            self.weekend.text = [NSString stringWithFormat:@"周%@",string];
+             [self.dateList reloadData];
+        }
+    }
 }
 
 
 -(void)ReloadDateNoti:(NSNotification *)noti{
-    
-    NSLog(@"%@",noti.userInfo);
     NSString *startime = (NSString *)[noti.userInfo valueForKey:@"启动时间"];
     NSString *endtime = (NSString *)[noti.userInfo valueForKey:@"结束时间"];
     NSString *temp = (NSString *)[noti.userInfo valueForKey:@"温度"];
     
-    DateModle *model =  [[DateModle alloc]init];
-    model.tempture = temp;
+    NSString *s  = [self.weekend.text substringWithRange:NSMakeRange(1, 1)];
+    NSString *s1 = [self arabicNumberalsFromChineseNumberals:s];
+    int weekend = [s1 intValue];
+   
+    DateCollection *mo = self.datenum[weekend];
+    DateModel *mod = [[DateModel alloc]init];
+    mod.startime = startime;
+    mod.endtime = endtime;
+    mod.tempture = temp;
+    [mo.modelcoll addObject:mod];
+    
+    DataBaseModel *model = [[DataBaseModel alloc]init];
     model.startime = startime;
     model.endtime = endtime;
-    [self.datenum addObject:model];
+    model.temperature = temp;
+    model.date = self.weekend.text;
+    
+    [self.manger insertdbWithModel:model];
     
     [self.dateList reloadData];
-
+    
 }
 
 
@@ -136,15 +221,29 @@
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return self.datenum.count;
+    
+  
+    NSString *s  = [self.weekend.text substringWithRange:NSMakeRange(1, 1)];
+    NSString *s1 = [self arabicNumberalsFromChineseNumberals:s];
+    int weekend = [s1 intValue];
+    DateCollection *mo = self.datenum[weekend];
+    
+    return mo.modelcoll.count;
+    
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     ListTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"list"];
    
-    cell.temp.text = [self.datenum[indexPath.row]tempture];
-    cell.date.text = [NSString stringWithFormat:@"%@ - %@",[self.datenum[indexPath.row] startime],[self.datenum[indexPath.row] endtime]];
-    cell.dateimg.image = [UIImage imageNamed:@"morning"];
+  
+        NSString *s  = [self.weekend.text substringWithRange:NSMakeRange(1, 1)];
+        NSString *s1 = [self arabicNumberalsFromChineseNumberals:s];
+        int weekend = [s1 intValue];
+        DateCollection *mo = self.datenum[weekend];
+        
+        NSString *time = [NSString stringWithFormat:@"%@ - %@",[mo.modelcoll[indexPath.row]startime],[mo.modelcoll[indexPath.row]endtime]];
+        cell.date.text = time;
+        cell.temp.text = [mo.modelcoll[indexPath.row]tempture];
     
     
     cell.backgroundColor = [UIColor clearColor];
@@ -163,6 +262,7 @@
         [self presentViewController:tp animated:YES completion:nil];
     }else if (sender.tag == 1001){
         AutoViewController *at = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"auto"];
+        at.weekend = self.weekend.text;
         [self presentViewController:at animated:YES completion:nil];
     }else if (sender.tag == 1003){
         SettingViewController *se = [[SettingViewController alloc]init];
@@ -175,6 +275,69 @@
         [con.view didMoveToWindow];
     }
 
+}
+
+
+- (NSString *)arabicNumberalsFromChineseNumberals:(NSString *)arabic{
+    NSMutableDictionary * mdic =[[NSMutableDictionary alloc]init];
+    
+    [mdic setObject:[NSNumber numberWithInt:10000] forKey:@"万"];
+    [mdic setObject:[NSNumber numberWithInt:1000] forKey:@"千"];
+    [mdic setObject:[NSNumber numberWithInt:100] forKey:@"百"];
+    [mdic setObject:[NSNumber numberWithInt:10] forKey:@"十"];
+    
+    [mdic setObject:[NSNumber numberWithInt:9] forKey:@"九"];
+    [mdic setObject:[NSNumber numberWithInt:8] forKey:@"八"];
+    [mdic setObject:[NSNumber numberWithInt:7] forKey:@"七"];
+    [mdic setObject:[NSNumber numberWithInt:6] forKey:@"六"];
+    [mdic setObject:[NSNumber numberWithInt:5] forKey:@"五"];
+    [mdic setObject:[NSNumber numberWithInt:4] forKey:@"四"];
+    [mdic setObject:[NSNumber numberWithInt:3] forKey:@"三"];
+    [mdic setObject:[NSNumber numberWithInt:2] forKey:@"二"];
+    [mdic setObject:[NSNumber numberWithInt:2] forKey:@"两"];
+    [mdic setObject:[NSNumber numberWithInt:1] forKey:@"一"];
+    [mdic setObject:[NSNumber numberWithInt:0] forKey:@"零"];
+    
+    //    NSLog(@"%@",mdic);
+    
+    BOOL flag=YES;//yes表示正数，no表示负数
+    NSString * s=[arabic substringWithRange:NSMakeRange(0, 1)];
+    if([s isEqualToString:@"负"]){
+        flag=NO;
+    }
+    int i=0;
+    if(!flag){
+        i=1;
+    }
+    int sum=0;//和
+    int num[20];//保存单个汉字信息数组
+    for(int i=0;i<20;i++){//将其全部赋值为0
+        num[i]=0;
+    }
+    int k=0;//用来记录数据的个数
+    
+    //如果是负数，正常的数据从第二个汉字开始，否则从第一个开始
+    for(;i<[arabic length];i++){
+        NSString * key=[arabic substringWithRange:NSMakeRange(i, 1)];
+        int tmp=[[mdic valueForKey:key] intValue];
+        num[k++]=tmp;
+    }
+    //将获得的所有数据进行拼装
+    for(int i=0;i<k;i++){
+        if(num[i]<10&&num[i+1]>=10){
+            sum+=num[i]*num[i+1];
+            i++;
+        }else{
+            sum+=num[i];
+        }
+    }
+    NSMutableString * result=[[NSMutableString alloc]init];;
+    if(flag){//如果正数
+        result=[NSMutableString stringWithFormat:@"%d",sum];
+    }else{//如果负数
+        result=[NSMutableString stringWithFormat:@"-%d",sum];
+    }
+    return result;
 }
 
 - (void)didReceiveMemoryWarning {

@@ -13,14 +13,17 @@
 #import "ViewController.h"
 #import "SettingViewController.h"
 #import "ConfigViewController.h"
+#import "FMDataManager.h"
+#import "AutoTableViewCell.h"
 BOOL isopen = false;
 BOOL ismaualopen  =false;
-@interface AutoViewController ()
-@property (weak, nonatomic) IBOutlet AutoView *autoview;
+@interface AutoViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic,strong)UIView *leftview;
 @property(nonatomic,strong)UIVisualEffectView *visual;
 @property(nonatomic,strong)UIView *maualview;
 @property(nonatomic,strong)UIButton *openpanel;
+@property(nonatomic,strong)UITableView *list;
+@property(nonatomic,strong)NSMutableArray *DataSource;
 @end
 
 @implementation AutoViewController
@@ -31,87 +34,29 @@ BOOL ismaualopen  =false;
     
     NSArray *colors = @[[UIColor flatOrangeColor
                          ],[UIColor flatBlueColorDark]];
-    self.autoview.backgroundColor = GradientColor(UIGradientStyleTopToBottom, self.autoview.frame, colors);
+    self.view.backgroundColor = GradientColor(UIGradientStyleTopToBottom,self.view.frame, colors);
 
-    UILabel *time1 = [[UILabel alloc]initWithFrame:CGRectMake(30, 220, 50, 40)];
-    time1.text = @"17:00";
-    time1.textColor = [UIColor flatWhiteColor];
-    time1.tag = 10001;
-    [self.view addSubview:time1];
     
-    UILabel *time2 = [[UILabel alloc]initWithFrame:CGRectMake(30, 350, 50, 40)];
-    time2.text = @"18:00";
+    FMDataManager *manager = [FMDataManager SharedDB];
+    NSMutableArray *arr = [manager SearchDBwithTitle:self.weekend];
+    if (arr.count == 0) {
+        NSLog(@"当前日程没有计划!");
+    }else{
+        self.DataSource = arr;
+    }
     
-    time2.textColor = [UIColor flatWhiteColor];
-    [self.view addSubview:time2];
-    
-    
-    UILabel *time3 = [[UILabel alloc]initWithFrame:CGRectMake(30, 480 , 50, 40)];
-    time3.text = @"19:00";
-    time3.textColor = [UIColor flatWhiteColor];
-    [self.view addSubview:time3];
-    
-    UILabel *lb = [[UILabel alloc]initWithFrame:CGRectMake(170, 210, 120, 30)];
-    lb.numberOfLines = 0;
-    lb.font = [UIFont systemFontOfSize:22];
-    lb.textColor = [UIColor flatWhiteColor];
-    lb.text = @"32℃";
-    [self.view addSubview:lb];
-    
-    UILabel *lb1 = [[UILabel alloc]initWithFrame:CGRectMake(170, 245, 120,30)];
-    lb1.numberOfLines = 0;
-    lb1.font = [UIFont systemFontOfSize:17];
-    lb1.textColor = [[UIColor flatWhiteColor] colorWithAlphaComponent:0.5];
-    lb1.text = @"17:00 - 18:00";
-    [self.view addSubview:lb1];
+    self.list = [[UITableView alloc]initWithFrame:CGRectMake(20, 65, self.view.frame.size.width - 120, self.view.frame.size.height - 185) style:UITableViewStylePlain];
+    [self.list registerClass:[AutoTableViewCell class] forCellReuseIdentifier:@"cell"];
+    self.list.backgroundColor = [UIColor clearColor];
+    self.list.delegate = self;
+    self.list.dataSource = self;
+    self.list.scrollEnabled = false;
+    self.list.separatorStyle = UITableViewCellSeparatorStyleNone;
+    [self.view addSubview:self.list];
     
     
-    UILabel *lb2 = [[UILabel alloc]initWithFrame:CGRectMake(170,340, 120, 30)];
-    lb2.numberOfLines = 0;
-    lb2.font = [UIFont systemFontOfSize:22];
-    lb2.textColor = [UIColor flatWhiteColor];
-    lb2.text = @"32℃";
-    [self.view addSubview:lb2];
-    
-    UILabel *lb3 = [[UILabel alloc]initWithFrame:CGRectMake(170,365, 120, 50)];
-    lb3.numberOfLines = 0;
-    lb3.font = [UIFont systemFontOfSize:17];
-    lb3.textColor = [[UIColor flatWhiteColor] colorWithAlphaComponent:0.5];
-    lb3.text = @"18:00 - 19:00";
-    [self.view addSubview:lb3];
     
     
-    UILabel *lb4 = [[UILabel alloc]initWithFrame:CGRectMake(170,470, 120, 30)];
-    lb4.numberOfLines = 0;
-    lb4.font = [UIFont systemFontOfSize:22];
-    lb4.textColor = [UIColor flatWhiteColor];
-    lb4.text = @"32℃";
-    [self.view addSubview:lb4];
-    
-    UILabel *lb5 = [[UILabel alloc]initWithFrame:CGRectMake(170,490, 120, 50)];
-    lb5.numberOfLines = 0;
-    lb5.font = [UIFont systemFontOfSize:17];
-    lb5.textColor = [[UIColor flatWhiteColor] colorWithAlphaComponent:0.5];
-    lb5.text = @"20:00 - 22:00";
-    [self.view addSubview:lb5];
-
-    UILabel *maintime = [[UILabel alloc]initWithFrame:CGRectMake(self.view.frame.size.width - 180,80, 120, 40)];
-    maintime.text = @"30℃";
-    maintime.textColor = [UIColor flatWhiteColor];
-    maintime.font = [UIFont systemFontOfSize:34];
-    [self.view addSubview:maintime];
-    
-    UILabel *lb6 = [[UILabel alloc]initWithFrame:CGRectMake(self.view.frame.size.width - 180, 120, 160, 30)];
-    lb6.textColor = [[UIColor flatWhiteColor]colorWithAlphaComponent:0.5];
-    lb6.text = @"当前计划";
-    lb6.font = [UIFont systemFontOfSize:17];
-    [self.view addSubview:lb6];
-    
-    UILabel *lb7 = [[UILabel alloc]initWithFrame:CGRectMake(self.view.frame.size.width - 180, 140, 120, 40)];
-    lb7.textColor = [[UIColor flatWhiteColor]colorWithAlphaComponent:0.5];
-    lb7.text = @"16:00 - 17:00";
-    lb7.font = [UIFont systemFontOfSize:17];
-    [self.view addSubview:lb7];
     
     
     UIImageView *run = [[UIImageView alloc]initWithFrame:CGRectMake(self.view.frame.size.width - 60, 145, 30, 30)];
@@ -229,18 +174,12 @@ BOOL ismaualopen  =false;
     [self.visual addSubview:roomtemp];
     
     
-    
-    
     UIButton *menu = [[UIButton alloc]initWithFrame:CGRectMake(self.view.frame.size.width - 35, 35, 30, 30)];
     [menu setImage:[UIImage imageNamed:@"menu"] forState:0];
     [menu addTarget:self action:@selector(LeftPanelOpen:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:menu];
     
 }
-
-
-
-
 
 -(void)BtnFunction:(UIButton *)sender{
     if (sender.tag == 1002
@@ -286,6 +225,34 @@ BOOL ismaualopen  =false;
 -(int)getRandomNumber:(int)from to:(int)to
 {
     return (int)(from + (arc4random() % (to - from + 1)));
+}
+
+
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 1;
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return self.DataSource.count;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    AutoTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+     
+    cell.index = indexPath;
+    cell.time.text = [NSString stringWithFormat:@"%@ - %@",[self.DataSource[indexPath.row]startime],[self.DataSource[indexPath.row]endtime]];
+    cell.img.image = [UIImage imageNamed:@"sun"];
+    cell.temperature.text = [self.DataSource[indexPath.row] temperature];
+    cell.backgroundColor = [UIColor clearColor];
+    return cell;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath == 0) {
+        return 140;
+    }else{
+        return 100;
+    }
 }
 
 - (void)didReceiveMemoryWarning {

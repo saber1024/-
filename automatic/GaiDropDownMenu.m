@@ -199,9 +199,9 @@ static CGFloat const seperatorWidth = 1;
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(cellTapped:) name:@"CCDropDownMenuCellTapped" object:nil];
     
-    self.activeColor = [UIColor colorWithRed:0.902 green:0.4196 blue:0.1255 alpha:1.0];
-    self.inactiveColor = [UIColor colorWithRed:0.6 green:0.6 blue:0.6 alpha:1.0];
-    self.seperatorColor = [UIColor colorWithRed:0.8667 green:0.8667 blue:0.8667 alpha:1.0];
+    self.activeColor = [UIColor whiteColor];
+    self.inactiveColor = [UIColor whiteColor];
+    self.seperatorColor = [UIColor whiteColor];
     self.borderLayer.borderColor = self.seperatorColor.CGColor;
     self.titleViewColor = [UIColor whiteColor];
     self.backgroundColor = [UIColor clearColor];

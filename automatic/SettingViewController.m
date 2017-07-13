@@ -12,6 +12,7 @@
 #import "BEMCheckBox.h"
 #import "AutoViewController.h"
 #import "ViewController.h"
+#import "FMDataManager.h"
 #define ScrHeight [UIScreen mainScreen].bounds.size.height
 #define ScrWidth  [UIScreen mainScreen].bounds.size.width
 
@@ -21,7 +22,7 @@
 @property(nonatomic,strong)NSString *hetemp;
 @property(nonatomic,strong)NSString *lowtemp;
 @property(nonatomic,strong)NSString *sensor;
-
+@property(nonatomic,strong)NSMutableArray *setarr;
 
 @end
 
@@ -44,6 +45,10 @@
     self.view.backgroundColor = [UIColor flatBlueColorDark];
     
     UIBlurEffect *blur = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
+    
+    
+    
+    
     
     
     //温度补偿

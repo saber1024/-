@@ -9,7 +9,6 @@
 #import "ModelViewController.h"
 #import "AutoViewController.h"
 #import "tempViewController.h"
-#import "CalendarViewController.h"
 @interface ModelViewController ()
 
 @end
@@ -68,9 +67,7 @@
         [fileManager createFileAtPath:filePath contents:nil attributes:nil];
         
     }
-    CalendarViewController *ca = [[CalendarViewController alloc]init];
-    [self presentViewController:ca animated:YES completion:nil];
-    
+   
 }
 
 -(void)manualMode{
