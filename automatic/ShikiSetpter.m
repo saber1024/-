@@ -13,7 +13,7 @@ IB_DESIGNABLE
 {
     self = [super initWithFrame:frame];
     if (self) {
-        [self SetUpStepter];
+
     }
     return self;
 }
@@ -35,11 +35,9 @@ IB_DESIGNABLE
     
 }
 
--(void)SetUpStepter{
-    self.backgroundColor = self.backgroundColor;
-    
+-(void)setTitleColor:(UIColor *)titleColor{
     UIButton *minus = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 40, self.frame.size.height)];
-
+    
     [minus setTitle:@"-" forState:UIControlStateNormal];
     minus.titleLabel.font = [UIFont systemFontOfSize:20];
     [minus addTarget:self action:@selector(StepValueMinus:) forControlEvents:UIControlEventTouchUpInside];
@@ -66,6 +64,9 @@ IB_DESIGNABLE
     plus.titleLabel.textColor = self.titleColor;
     [self addSubview:plus];
 }
+
+-(void)SetUpStepter{
+   }
 
 -(void)StepValuePlus:(UIButton *)sender{
     UILabel *valuelb = (UILabel *)[self viewWithTag:1001];

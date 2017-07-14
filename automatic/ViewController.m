@@ -9,7 +9,6 @@
 #import "ViewController.h"
 #import "ListTableViewCell.h"
 #import "DateConfigViewController.h"
-#import "automatic-Swift.h"
 #import "tempViewController.h"
 #import "AutoViewController.h"
 #import "SettingViewController.h"
@@ -49,8 +48,20 @@ int date = 1;
     [vi addSubview:back];
     
     
+    NSDate*date = [NSDate date];
+    NSCalendar*calendar = [NSCalendar currentCalendar];
+    NSDateComponents*comps;
+    comps =[calendar components:(NSCalendarUnitWeekOfYear | NSCalendarUnitWeekday |NSCalendarUnitWeekdayOrdinal)
+                       fromDate:date];
+    
+    NSDateFormatter * dateFormatter = [[NSDateFormatter alloc] init] ;
+    [dateFormatter setDateFormat:@"EEEE"];
+    ;
+    [dateFormatter stringFromDate:date];
+    
+    
     _weekend  = [[UILabel alloc]initWithFrame:CGRectMake(self.view.center.x - 20, self.view.frame.size.height - 175, 120, 30)];
-    _weekend.text = @"周一";
+    _weekend.text = [self weekdayStringFromDate:date];
     _weekend.font = [UIFont systemFontOfSize:25];
     _weekend.textColor = [UIColor whiteColor];
     [vi addSubview:_weekend];
@@ -275,6 +286,25 @@ int date = 1;
         [con.view didMoveToWindow];
     }
 
+}
+
+
+- (NSString*)weekdayStringFromDate:(NSDate*)inputDate {
+    
+    NSArray *weekdays = [NSArray arrayWithObjects: [NSNull null], @"Sunday", @"周一", @"周二", @"周三", @"周四", @"周五", @"周六", nil];
+    
+    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    
+    NSTimeZone *timeZone = [[NSTimeZone alloc] initWithName:@"Asia/Shanghai"];
+    
+    [calendar setTimeZone: timeZone];
+    
+    NSCalendarUnit calendarUnit = NSCalendarUnitWeekday;
+    
+    NSDateComponents *theComponents = [calendar components:calendarUnit fromDate:inputDate];
+    
+    return [weekdays objectAtIndex:theComponents.weekday];
+    
 }
 
 

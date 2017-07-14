@@ -32,7 +32,6 @@
 		B8069DE21F0E1FCC00AA0D27 /* 左 (3).png in Resources */ = {isa = PBXBuildFile; fileRef = B8069DE11F0E1FCC00AA0D27 /* 左 (3).png */; };
 		B8069DE51F0E33DB00AA0D27 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8069DE41F0E33DB00AA0D27 /* SettingViewController.m */; };
 		B8069DE91F0E36E000AA0D27 /* ShikiSetpter.m in Sources */ = {isa = PBXBuildFile; fileRef = B8069DE81F0E36E000AA0D27 /* ShikiSetpter.m */; };
-		B82353FF1F064E3500A9EC00 /* WaveProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82353FE1F064E3500A9EC00 /* WaveProgressView.swift */; };
 		B82354041F064E3D00A9EC00 /* Display.m in Sources */ = {isa = PBXBuildFile; fileRef = B82354011F064E3D00A9EC00 /* Display.m */; };
 		B82354051F064E3D00A9EC00 /* tempView.m in Sources */ = {isa = PBXBuildFile; fileRef = B82354031F064E3D00A9EC00 /* tempView.m */; };
 		B82354121F064FB900A9EC00 /* tempViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B82354111F064FB900A9EC00 /* tempViewController.m */; };
@@ -156,7 +155,6 @@
 		B8069DE41F0E33DB00AA0D27 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
 		B8069DE71F0E36E000AA0D27 /* ShikiSetpter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShikiSetpter.h; sourceTree = "<group>"; };
 		B8069DE81F0E36E000AA0D27 /* ShikiSetpter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShikiSetpter.m; sourceTree = "<group>"; };
-		B82353FE1F064E3500A9EC00 /* WaveProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaveProgressView.swift; sourceTree = "<group>"; };
 		B82354001F064E3D00A9EC00 /* Display.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Display.h; sourceTree = "<group>"; };
 		B82354011F064E3D00A9EC00 /* Display.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Display.m; sourceTree = "<group>"; };
 		B82354021F064E3D00A9EC00 /* tempView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tempView.h; sourceTree = "<group>"; };
@@ -389,7 +387,6 @@
 				B885A1491F0236D2008869B4 /* ListTableViewCell.xib */,
 				B885A14E1F02406C008869B4 /* DateConfigViewController.h */,
 				B885A14F1F02406C008869B4 /* DateConfigViewController.m */,
-				B82353FE1F064E3500A9EC00 /* WaveProgressView.swift */,
 				B82354001F064E3D00A9EC00 /* Display.h */,
 				B82354011F064E3D00A9EC00 /* Display.m */,
 				B82354021F064E3D00A9EC00 /* tempView.h */,
@@ -772,7 +769,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B824E5491F1625FB0084F8F3 /* DateCollection.m in Sources */,
-				B82353FF1F064E3500A9EC00 /* WaveProgressView.swift in Sources */,
 				B802D34A1F1355A000C04188 /* CCDropDownMenu.m in Sources */,
 				B84C0AD61F0F2677009C0D92 /* BEMPathManager.m in Sources */,
 				B885A1501F02406C008869B4 /* DateConfigViewController.m in Sources */,
@@ -1011,7 +1007,6 @@
 		B885A0E61F022F3B008869B4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 4567L96C8J;
@@ -1029,7 +1024,6 @@
 		B885A0E71F022F3B008869B4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 4567L96C8J;
@@ -1046,7 +1040,6 @@
 		B885A0E91F022F3B008869B4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 4567L96C8J;
 				INFOPLIST_FILE = automaticUITests/Info.plist;
@@ -1063,7 +1056,6 @@
 		B885A0EA1F022F3B008869B4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 4567L96C8J;
 				INFOPLIST_FILE = automaticUITests/Info.plist;

@@ -15,6 +15,7 @@
 #import "ConfigViewController.h"
 #import "FMDataManager.h"
 #import "AutoTableViewCell.h"
+
 BOOL isopen = false;
 BOOL ismaualopen  =false;
 @interface AutoViewController ()<UITableViewDelegate,UITableViewDataSource>
@@ -35,10 +36,22 @@ BOOL ismaualopen  =false;
     NSArray *colors = @[[UIColor flatOrangeColor
                          ],[UIColor flatBlueColorDark]];
     self.view.backgroundColor = GradientColor(UIGradientStyleTopToBottom,self.view.frame, colors);
-
+    
+    NSDate*date = [NSDate date];
+    NSCalendar*calendar = [NSCalendar currentCalendar];
+    NSDateComponents*comps;
+    comps =[calendar components:(NSCalendarUnitWeekOfYear | NSCalendarUnitWeekday |NSCalendarUnitWeekdayOrdinal)
+                       fromDate:date];
+    
+    NSDateFormatter * dateFormatter = [[NSDateFormatter alloc] init] ;
+    [dateFormatter setDateFormat:@"EEEE"];
+    ;
+    [dateFormatter stringFromDate:date];
+    
+    
     
     FMDataManager *manager = [FMDataManager SharedDB];
-    NSMutableArray *arr = [manager SearchDBwithTitle:self.weekend];
+    NSMutableArray *arr = [manager SearchDBwithTitle:[self weekdayStringFromDate:date]];
     if (arr.count == 0) {
         NSLog(@"当前日程没有计划!");
     }else{
@@ -187,7 +200,9 @@ BOOL ismaualopen  =false;
         tempViewController *tp = [[tempViewController alloc]init];
         [self presentViewController:tp animated:YES completion:nil];
     }else if (sender.tag == 1001){
-        [self dismissViewControllerAnimated:YES completion:nil];
+        ViewController *vc = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"vcx"];
+        [self presentViewController:vc animated:YES completion:nil];
+        
     }else if (sender.tag == 1003){
         SettingViewController *se = [[SettingViewController alloc]init];
         [self presentViewController:se animated:YES completion:nil];
@@ -254,6 +269,25 @@ BOOL ismaualopen  =false;
         return 100;
     }
 }
+
+- (NSString*)weekdayStringFromDate:(NSDate*)inputDate {
+    
+    NSArray *weekdays = [NSArray arrayWithObjects: [NSNull null], @"Sunday", @"周一", @"周二", @"周三", @"周四", @"周五", @"周六", nil];
+    
+    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    
+    NSTimeZone *timeZone = [[NSTimeZone alloc] initWithName:@"Asia/Shanghai"];
+    
+    [calendar setTimeZone: timeZone];
+    
+    NSCalendarUnit calendarUnit = NSCalendarUnitWeekday;
+    
+    NSDateComponents *theComponents = [calendar components:calendarUnit fromDate:inputDate];
+    
+    return [weekdays objectAtIndex:theComponents.weekday];
+    
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

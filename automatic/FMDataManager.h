@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <FMDB.h>
 #import "DataBaseModel.h"
+#import "SettingDataModel.h"
 @interface FMDataManager : NSObject{
     FMDatabase *db;
 }
@@ -22,6 +23,6 @@
 -(NSMutableArray*)SearchDBwithTitle:(NSString *)title;
 -(NSMutableArray *)SearchAllDB;
 -(NSMutableArray *)SearchAllSettingDB;
-
+-(void)insertSettingData:(SettingDataModel *)model;
 
 @end

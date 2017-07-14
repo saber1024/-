@@ -35,7 +35,6 @@ IB_DESIGNABLE
     self.settemp = [[UILabel alloc]initWithFrame:CGRectMake(self.vi.center.x - 60, 30, 120, 100)];
     self.settemp.text = @"24℃";
     self.settemp.textColor = [UIColor whiteColor];
-//    self.settemp.textAlignment = NSTextAlignmentCenter;
     self.settemp.font = [UIFont systemFontOfSize:45];
     self.settemp.userInteractionEnabled = YES;
     [self.vi addSubview:self.settemp];

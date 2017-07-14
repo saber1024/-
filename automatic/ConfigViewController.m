@@ -40,26 +40,51 @@ BOOL ison = YES;
     self.menu.title = @"手动模式";
     self.menu.numberOfRows =  2;
     self.menu.textOfRows = @[@"手动模式",@"自动模式"];
-//    NSArray<UIColor *> * co = [[NSArray alloc]initWithObjects:[UIColor whiteColor],[UIColor whiteColor], nil];
-//    self.menu.colorOfRows = co;
-    
+
     self.menu.titleViewColor = [UIColor clearColor];
     [vi addSubview:self.menu];
 
 
-    self.On = [[UIButton alloc]initWithFrame:CGRectMake(self.view.center.x - 100, self.view.center.y +70, 200, 40)];
+    
+    
+    
+    self.On = [[UIButton alloc]initWithFrame:CGRectMake(self.view.center.x - 100, self.view.center.y +120, 200, 40)];
     [self.On setTitle:@"开启" forState:0];
     self.On.layer.borderWidth = 1;
     self.On.layer.borderColor = [UIColor whiteColor].CGColor;
     [self.On setTitleColor:[UIColor whiteColor] forState:0];
     [self.view addSubview:self.On];
     
-    self.Off = [[UIButton alloc]initWithFrame:CGRectMake(self.view.center.x -100, self.view.center.y + 120 , 200, 40)];
+    self.Off = [[UIButton alloc]initWithFrame:CGRectMake(self.view.center.x -100, self.view.center.y + 170 , 200, 40)];
     self.Off.layer.borderColor = [UIColor whiteColor].CGColor;
     self.Off.layer.borderWidth = 1;
     [self.Off setTitle:@"关闭" forState:0];
     [self.Off setTitleColor:[UIColor whiteColor] forState:0];
     [self.view addSubview:self.Off];
+    
+    
+    NSArray *btnimg  = @[@"开关",@"时钟",@"自动",@"风车"];
+    for (int i = 0; i<4; i++) {
+        UIView *func = [[UIView alloc]initWithFrame:CGRectMake(i *(self.view.frame.size.width / 4), self.view.frame.size.height - 100, self.view.frame.size.width/4, 100)];
+        func.layer.borderWidth = 0.5;
+        func.layer.borderColor = [UIColor whiteColor].CGColor;
+        func.backgroundColor = [UIColor clearColor];
+        [self.view addSubview:func];
+        UIButton *open = [[UIButton alloc]initWithFrame:CGRectMake(26,20, 40, 40)];
+        open.tag  = 1000+i;
+        [open setImage:[UIImage imageNamed:btnimg[i]] forState:0];
+        [func addSubview:open];
+        [open addTarget:self action:@selector(ClosePage) forControlEvents:UIControlEventTouchUpInside];
+        UILabel *title = [[UILabel alloc]initWithFrame:CGRectMake(0, 65,func.frame.size.width, 30)];
+        title.text = btnimg[i];
+        title.textAlignment = NSTextAlignmentCenter;
+        title.textColor = [UIColor whiteColor];
+        if (i == 3) {
+            title.text = @"设置";
+        }
+        [func addSubview:title];
+    }
+
     
 }
 

@@ -8,9 +8,8 @@
 
 #import "tempViewController.h"
 #import "Display.h"
-#import "Chameleon.h"
+#import <Chameleon.h>
 #import "tempView.h"
-#import "automatic-Swift.h"
 #import "SettingViewController.h"
 #import "AutoViewController.h"
 #import "ViewController.h"
@@ -21,7 +20,6 @@ int flag = 0;
 @property(nonatomic,strong)CAShapeLayer *down;
 @property(nonatomic,strong)UILabel *settemp;
 @property(nonatomic,assign) CGRect rect;
-@property(nonatomic,strong)WaveProgressView *wave;
 @property(nonatomic,strong)UIVisualEffectView *vi;
 @property(nonatomic,strong)Display *backview;
 @property(nonatomic,strong)tempView *frontView;

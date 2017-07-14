@@ -103,8 +103,8 @@
         SettingDataModel *mode = [[SettingDataModel alloc]init];
         mode.compensation = [res stringForColumn:@"compensation"];
         mode.sensor = [res stringForColumn:@"sensor"];
-        mode.highprotect = [res stringForColumn:@"high protect"];
-        mode.lowprotect = [res stringForColumn:@"low protect"];
+        mode.highprotect = [res stringForColumn:@"highprotect"];
+        mode.lowprotect = [res stringForColumn:@"lowprotect"];
         [result addObject:mode];
     }
     [db close];
@@ -114,7 +114,7 @@
 
 -(BOOL)createSettingDB{
     if ([db open]) {
-        BOOL result =   [db executeUpdateWithFormat:@"CREATE TABLE IF NOT EXISTS Settings(compensation TEXT,tempdifferences TEXT,sensor TEXT,high protect TEXT,lowprotect TEXT)"];
+        BOOL result =   [db executeUpdateWithFormat:@"CREATE TABLE IF NOT EXISTS Settings(compensation TEXT,tempdifferences TEXT,sensor TEXT,highprotect TEXT,lowprotect TEXT)"];
         if (result) {
             NSLog(@"Create Table success!");
             [db close];
@@ -131,5 +131,37 @@
     }
 }
 
+-(void)insertSettingData:(SettingDataModel *)model{
+    NSMutableArray *arr = [self SearchAllSettingDB];
+    [db open];
+    if (arr.count != 0) {
+        BOOL flag = [db executeUpdate:@"delete from shiki where compensation = ?",[arr[0]compensation]];
+        if (flag == true) {
+            BOOL flag1 = [db executeUpdate:@"insert into Settings(compensation,tempdifferences,sensor,highprotect,lowprotect) values(?,?,?,?,?)",model.compensation,model.tempdifferences,model.sensor,model.highprotect,model.lowprotect];
+            if (flag1 == true) {
+                NSLog(@"插入数据成功!");
+                [db close];
+                
+            }else{
+                NSLog(@"插入数据失败");
+                [db close];
+                
+            }
+        }
+        
+    }else{
+        BOOL flag1 = [db executeUpdate:@"insert into Settings(compensation,tempdifferences,sensor,highprotect,lowprotect) values(?,?,?,?,?)",model.compensation,model.tempdifferences,model.sensor,model.highprotect,model.lowprotect];
+        if (flag1 == true) {
+            NSLog(@"插入数据成功!");
+            [db close];
+            
+        }else{
+            NSLog(@"插入数据失败");
+            [db close];
+            
+        }
+    }
+    
+}
 
 @end
